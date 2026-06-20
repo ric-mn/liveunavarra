@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIVEperformance · Valoración y optimización del rendimiento | LIVE Lab</title>
+<meta name="description" content="LIVEperformance del LIVE Lab: respuesta metabólica (VO2max, umbrales, sustratos) y neuromuscular (carga-velocidad, fatiga, torque-cadencia) al ejercicio. Pamplona, Navarra.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2DD4BF">
+<link rel="canonical" href="https://live.unavarra.es/performance.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LIVE Lab">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://live.unavarra.es/performance.html">
+<meta property="og:title" content="LIVEperformance · Valoración y optimización del rendimiento | LIVE Lab">
+<meta property="og:description" content="Respuesta metabólica y neuromuscular al ejercicio: VO2max, umbrales, sustratos, curva carga-velocidad, fatiga y torque-cadencia.">
+<meta property="og:image" content="https://live.unavarra.es/og-image.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LIVEperformance | LIVE Lab">
+<meta name="twitter:description" content="Valoración y optimización del rendimiento deportivo con ciencia aplicada.">
+<meta name="twitter:image" content="https://live.unavarra.es/og-image.png">
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://live.unavarra.es/" },
+    { "@type": "ListItem", "position": 2, "name": "LIVEperformance", "item": "https://live.unavarra.es/performance.html" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="fonts.css">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:#2DD4BF; --orange:#FB923C; --coral:#F43F5E; --blue:#818CF8;
+    --white:#FAFAFA; --gray-50:#F3F4F6; --gray-100:#E5E7EB; --gray-200:#E5E7EB;
+    --gray-400:#6B7280; --gray-600:#4B5563; --gray-900:#111827;
+    --matte:#1A1A1A;
+    --gradient: linear-gradient(90deg, var(--teal), var(--orange), var(--coral), var(--blue));
+  }
+  html { scroll-behavior: smooth; }
+  [id] { scroll-margin-top: 88px; }
+  body { font-family:'Inter',sans-serif; background:var(--white); color:var(--gray-900); line-height:1.6; }
+
+  .grad-text { background:var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .grad-bar { height:3px; background:var(--gradient); border-radius:2px; }
+  .grad-btn { background:var(--gradient); color:white; border:none; padding:14px 32px; border-radius:8px; font-size:15px; font-weight:600; cursor:pointer; letter-spacing:.01em; transition:opacity .2s; }
+  .grad-btn:hover { opacity:.88; }
+
+  /* ── NAV (shared) ── */
+  nav { position:sticky; top:0; z-index:100; background:rgba(250,250,250,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--gray-100); padding:0 48px; display:flex; align-items:center; justify-content:space-between; height:68px; }
+  .nav-logo { font-size:28px; font-weight:800; letter-spacing:-.03em; text-decoration:none; }
+  .nav-brandlock { display:flex; align-items:center; gap:12px; }
+  .nav-divider { width:1px; height:26px; background:var(--gray-100); }
+  .nav-upna { height:30px; width:auto; display:block; }
+  .nav-links { display:flex; gap:28px; list-style:none; font-size:14px; font-weight:700; color:#1A1A1A; align-items:center; }
+  .nav-links a { text-decoration:none; color:inherit; transition:color .15s; }
+  .nav-links a:hover, .nav-links a.current { color:var(--gray-900); }
+  .nav-links a.nav-brand { font-weight:800; letter-spacing:-.02em; position:relative; }
+  .nav-links a.nav-brand .sfx { color:#1A1A1A; }
+  .nav-links a.nav-brand.current::after { content:""; position:absolute; left:0; right:0; bottom:-7px; height:2px; background:var(--gradient); border-radius:2px; }
+  .nav-right { display:flex; align-items:center; gap:16px; }
+  .lang-toggle { font-size:13px; font-weight:600; color:var(--gray-400); cursor:pointer; padding:4px 10px; border:1px solid var(--gray-100); border-radius:6px; user-select:none; }
+  .lang-toggle .active { color:var(--gray-900); }
+  .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+  .nav-toggle span { width:22px; height:2px; background:var(--gray-900); border-radius:2px; transition:transform .25s,opacity .25s; }
+  .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2){ opacity:0; }
+  .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  /* ── PAGE HERO ── */
+  .page-hero { max-width:1100px; margin:0 auto; padding:80px 48px 40px; }
+  .page-hero .section-label { font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-400); margin-bottom:16px; }
+  .page-hero p { font-size:18px; color:var(--gray-600); max-width:660px; line-height:1.65; margin-top:20px; }
+  .section-divider { max-width:1100px; margin:0 auto; padding:0 48px; }
+
+  /* ── LOGO BAND ── */
+  .logo-band { background:#fff; border-top:1px solid var(--gray-100); border-bottom:1px solid var(--gray-100); padding:36px 0; }
+  .logo-fade { max-width:1100px; margin:0 auto; padding:0 48px; overflow:hidden; -webkit-mask-image:linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%); mask-image:linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%); }
+  .logo-head { max-width:1100px; margin:0 auto 26px; padding:0 48px; text-align:center; font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-400); }
+  .logo-track { display:flex; align-items:center; width:max-content; animation:logo-scroll 35s linear infinite; }
+  .logo-track img { height:var(--h, 26px); width:auto; object-fit:contain; margin:0 26px; filter:grayscale(100%); opacity:.55; transition:filter .25s, opacity .25s; }
+  .logo-track img:hover { filter:grayscale(0); opacity:1; }
+  .logo-band:hover .logo-track { animation-play-state:paused; }
+  @keyframes logo-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-track { animation:none; flex-wrap:wrap; justify-content:center; padding:0 48px; }
+    .logo-track img { transition:none; }
+  }
+
+  /* ── BRAND WORDMARK ── */
+  .wordmark { display:inline-block; font-weight:800; letter-spacing:-.03em; line-height:1; }
+  .wordmark .wm-live { font-size:56px; }
+  .wordmark .wm-suffix { font-size:24px; font-weight:700; color:var(--matte); position:relative; top:11px; left:1px; letter-spacing:-.01em; }
+
+  /* ── SECTIONS ── */
+  section { padding:64px 48px 72px; }
+  section.alt { background:var(--gray-50); border-top:1px solid var(--gray-100); border-bottom:1px solid var(--gray-100); }
+  .section-inner { max-width:1100px; margin:0 auto; }
+  .sec-h { font-size:30px; font-weight:800; letter-spacing:-.02em; margin-bottom:10px; }
+  .lead { font-size:17px; color:var(--gray-600); max-width:660px; line-height:1.65; margin-bottom:40px; }
+  .sub-head { font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--gray-400); margin:8px 0 22px; }
+
+  .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (min-width:561px){ .services-grid.two { grid-template-columns:repeat(2,1fr); } }
+  .service-card { background:white; border:1px solid var(--gray-100); border-radius:16px; padding:32px; transition:box-shadow .2s,transform .2s; }
+  .service-card:hover { box-shadow:0 8px 32px rgba(0,0,0,.06); transform:translateY(-2px); }
+  .service-icon { width:48px; height:48px; border-radius:12px; background:var(--gray-50); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:20px; }
+  section.alt .service-icon { background:white; }
+  .service-card h3 { font-size:17px; font-weight:700; margin-bottom:8px; letter-spacing:-.01em; }
+  .service-card p { font-size:14px; color:var(--gray-600); line-height:1.6; }
+
+  /* ── ACCORDIONS (native <details>) ── */
+  .acc-wrap { margin-top:40px; display:flex; flex-direction:column; gap:12px; }
+  .acc { border:1px solid var(--gray-100); border-radius:12px; background:white; overflow:hidden; }
+  .acc summary { list-style:none; cursor:pointer; padding:18px 22px; font-size:16px; font-weight:700; color:var(--gray-900); display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .acc summary::-webkit-details-marker { display:none; }
+  .acc summary::after { content:"+"; font-size:24px; font-weight:400; line-height:1; color:var(--gray-400); }
+  .acc[open] summary::after { content:"\2013"; }
+  .acc-body { padding:0 22px 20px; font-size:15px; color:var(--gray-600); line-height:1.65; }
+  .seal { margin-top:28px; font-size:13.5px; color:var(--gray-400); font-style:italic; }
+
+  .cross-link { max-width:1100px; margin:8px auto 0; font-size:15px; color:var(--gray-600); }
+  .cross-link a { font-weight:700; text-decoration:none; }
+  .cross-link a .sfx { color:var(--matte); }
+
+  /* ── FOOTER (shared) ── */
+  footer { background:var(--gray-900); color:white; padding:64px 48px 40px; }
+  .footer-inner { max-width:1100px; margin:0 auto; }
+  .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.08); }
+  .footer-logo { font-size:24px; font-weight:800; letter-spacing:-.02em; margin-bottom:16px; }
+  .footer-desc { font-size:14px; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px; }
+  .footer-col h4 { font-size:13px; font-weight:600; margin-bottom:20px; color:rgba(255,255,255,.7); }
+  .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .footer-col ul li { font-size:14px; color:rgba(255,255,255,.62); transition:color .15s; }
+  .footer-col ul li:hover { color:white; }
+  .footer-col ul li a { color:inherit; text-decoration:none; }
+  .footer-bottom { padding-top:32px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-size:13px; color:rgba(255,255,255,.62); }
+  .footer-bottom a { color:rgba(255,255,255,.68); text-decoration:none; }
+  .footer-bottom a:hover { color:#fff; text-decoration:underline; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width:900px){
+    nav { padding:0 24px; }
+    .nav-toggle { display:flex; }
+    .nav-links { position:absolute; top:68px; left:0; right:0; flex-direction:column; gap:0; background:var(--white); border-bottom:1px solid var(--gray-100); padding:8px 0; display:none; align-items:stretch; }
+    .nav-links.open { display:flex; }
+    .nav-links a { display:block; padding:14px 24px; }
+    .nav-links a:hover { background:var(--gray-50); }
+    .nav-links a.nav-brand.current::after { display:none; }
+    .page-hero { padding:56px 24px 32px; }
+    .section-divider { padding:0 24px; }
+    .logo-band { padding:28px 0; }
+    .logo-track img { margin:0 18px; }
+    section { padding:48px 24px 56px; }
+    .sec-h { font-size:24px; }
+    .services-grid { grid-template-columns:repeat(2,1fr); }
+    .wordmark .wm-live { font-size:44px; }
+    .wordmark .wm-suffix { font-size:20px; top:9px; }
+    footer { padding:56px 24px 32px; }
+    .footer-top { grid-template-columns:1fr 1fr; gap:32px; }
+  }
+  @media (max-width:560px){
+    .logo-track img { height:calc(var(--h, 26px) * .82); }
+    .services-grid { grid-template-columns:1fr; }
+    .wordmark .wm-live { font-size:38px; }
+    .wordmark .wm-suffix { font-size:17px; top:8px; }
+    .footer-top { grid-template-columns:1fr; gap:28px; }
+    .footer-bottom { flex-direction:column; align-items:flex-start; gap:8px; }
+  }
+</style>
+</head>
+<body>
+<a href="#top" class="skip-link">Saltar al contenido</a>
+<style>.skip-link{position:absolute;left:-9999px;top:0;background:#111827;color:#fff;padding:10px 16px;border-radius:0 0 8px 0;font-size:14px;font-weight:700;z-index:10000;text-decoration:none;}.skip-link:focus{left:0;}</style>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brandlock">
+    <a href="index.html#top" class="nav-logo grad-text">LIVE</a>
+    <span class="nav-divider"></span>
+    <img class="nav-upna" src="upna-logo.png" alt="Universidad Pública de Navarra">
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#top" data-i18n="nav.home">Inicio</a></li>
+    <li><a href="performance.html" class="nav-brand current"><span class="grad-text">LIVE</span><span class="sfx">performance</span></a></li>
+    <li><a href="development.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">development</span></a></li>    <li><a href="index.html#proyectos" data-i18n="nav.research">Investigación</a></li>
+    <li><a href="index.html#blog" data-i18n="nav.blog">Blog</a></li>
+    <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle" id="langToggle" title="Cambiar idioma / Switch language">
+      <span class="active" data-lang="es">ES</span> / <span data-lang="en">EN</span> / <span data-lang="eu">EUS</span>
+    </div>
+    <a href="reservas.html" class="grad-btn" style="padding:10px 22px; font-size:14px; display:inline-block; text-decoration:none;" data-i18n="nav.book">Reservar</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" id="top">
+  <div class="section-label" data-i18n="pf.label">Servicios</div>
+  <h1 class="wordmark"><span class="wm-live grad-text">LIVE</span><span class="wm-suffix">performance</span></h1>
+  <p data-i18n="pf.hero">Medimos tu respuesta metabólica y neuromuscular al ejercicio para convertir los datos en mejor rendimiento.</p>
+</div>
+<div class="section-divider"><div class="grad-bar"></div></div>
+
+<!-- ===== RESPUESTA METABÓLICA ===== -->
+<section id="metabolica">
+  <div class="section-inner">
+    <h2 class="sec-h" data-i18n="met.h">Respuesta metabólica al ejercicio <span class="grad-text">cardiorrespiratorio</span></h2>
+    <p class="lead" data-i18n="met.intro">Medimos cómo responde tu organismo al esfuerzo —oxígeno, umbrales y combustible— para definir tus zonas y tu estrategia con precisión.</p>
+
+    <div class="sub-head" data-i18n="met.sub">Interpretación de la respuesta al ejercicio</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🫁</div>
+        <h3 data-i18n="met.1.h">Test incremental máximo (VO₂max)</h3>
+        <p data-i18n="met.1.p">Determina tu consumo máximo de oxígeno y tu potencia aeróbica máxima en una rampa progresiva hasta el agotamiento.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3 data-i18n="met.2.h">Test de confirmación de umbrales</h3>
+        <p data-i18n="met.2.p">Verifica tus umbrales aeróbico y anaeróbico con cargas constantes para anclar con exactitud tus zonas de entrenamiento.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⛽</div>
+        <h3 data-i18n="met.3.h">Test de utilización de sustratos energéticos (ultradistancia)</h3>
+        <p data-i18n="met.3.p">Cuantifica cuánta grasa y cuántos hidratos quemas a cada intensidad: clave para la estrategia nutricional en pruebas de larga duración.</p>
+      </div>
+    </div>
+
+    <div class="acc-wrap">
+      <details class="acc">
+        <summary data-i18n="met.acc1.q">¿Para quién es?</summary>
+        <div class="acc-body" data-i18n="met.acc1.a">Desde quien empieza y quiere entrenar con cabeza hasta el deportista de competición que busca afinar zonas y estrategia. Adaptamos el protocolo a tu nivel y a tu objetivo.</div>
+      </details>
+      <details class="acc">
+        <summary data-i18n="met.acc2.q">¿Qué incluye?</summary>
+        <div class="acc-body" data-i18n="met.acc2.a">Una prueba progresiva en cicloergómetro de precisión con análisis de gases respiratorios y muestras de lactato. Según tu objetivo, añadimos la confirmación de umbrales o el análisis del uso de combustible.</div>
+      </details>
+      <details class="acc">
+        <summary data-i18n="met.acc3.q">¿Qué te llevas?</summary>
+        <div class="acc-body" data-i18n="met.acc3.a">Un informe claro con tu VO₂max, tus umbrales y tus zonas individualizadas, además de recomendaciones prácticas para tu entrenamiento.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO STRIP (equipamiento) -->
+<div class="logo-band">
+  <div class="logo-head" data-i18n="logos.head">Equipos de primer nivel para un asesoramiento avanzado</div>
+  <div class="logo-fade">
+  <div class="logo-track">
+    <img src="logos/lode.png" alt="LODE" style="--h:37px">
+    <img src="logos/cosmed.png" alt="COSMED" style="--h:50px">
+    <img src="logos/core.png" alt="CORE" style="--h:24px">
+    <img src="logos/garmin.svg" alt="Garmin" style="--h:35px">
+    <img src="logos/elite.png" alt="Elite" style="--h:23px">
+    <img src="logos/shimano.png" alt="Shimano" style="--h:24px">
+    <img src="logos/look.png" alt="LOOK" style="--h:23px">
+    <img src="logos/tforce.png" alt="T-Force" style="--h:36px">
+    <img src="logos/rogue.png" alt="Rogue" style="--h:24px">
+    <img src="logos/delsys.png" alt="Delsys" style="--h:39px">
+    <!-- copia para el bucle continuo -->
+    <img src="logos/lode.png" alt="" aria-hidden="true" style="--h:37px">
+    <img src="logos/cosmed.png" alt="" aria-hidden="true" style="--h:50px">
+    <img src="logos/core.png" alt="" aria-hidden="true" style="--h:24px">
+    <img src="logos/garmin.svg" alt="" aria-hidden="true" style="--h:35px">
+    <img src="logos/elite.png" alt="" aria-hidden="true" style="--h:23px">
+    <img src="logos/shimano.png" alt="" aria-hidden="true" style="--h:24px">
+    <img src="logos/look.png" alt="" aria-hidden="true" style="--h:23px">
+    <img src="logos/tforce.png" alt="" aria-hidden="true" style="--h:36px">
+    <img src="logos/rogue.png" alt="" aria-hidden="true" style="--h:24px">
+    <img src="logos/delsys.png" alt="" aria-hidden="true" style="--h:39px">
+  </div>
+  </div>
+</div>
+
+<!-- ===== RESPUESTA NEUROMUSCULAR ===== -->
+<section id="neuromuscular" class="alt">
+  <div class="section-inner">
+    <h2 class="sec-h" data-i18n="neu.h">Respuesta <span class="grad-text">neuromuscular</span> al ejercicio</h2>
+    <p class="lead" data-i18n="neu.intro">Medimos cómo produces fuerza, potencia y velocidad —y cómo te fatigas— para entrenar la fuerza con precisión.</p>
+
+    <div class="services-grid two">
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3 data-i18n="neu.1.h">Test de Curva Carga–Velocidad–Potencia</h3>
+        <p data-i18n="neu.1.p">Trazamos tu relación entre carga y velocidad para estimar tu fuerza máxima sin llegar al fallo y conocer a qué velocidad entrenas de verdad.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📉</div>
+        <h3 data-i18n="neu.2.h">Test de fatiga intraserie</h3>
+        <p data-i18n="neu.2.p">Cuantificamos la pérdida de velocidad dentro de la serie como medida objetiva del esfuerzo y la fatiga, para dosificar la carga.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3 data-i18n="neu.3.h">Test de optimización del Entrenamiento de Fuerza</h3>
+        <p data-i18n="neu.3.p">Definimos la carga y la dosis que maximizan tu adaptación según tu objetivo: fuerza, potencia o resistencia a la fuerza.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚴</div>
+        <h3 data-i18n="neu.4.h">Test de Torque–Cadencia (fuerza en el pedal)</h3>
+        <p data-i18n="neu.4.p">Analizamos la fuerza que aplicas en el pedal a distintas cadencias para entender tu perfil de fuerza específico en el ciclismo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POR MODALIDAD (placeholders) ===== -->
+<section id="modalidades">
+  <div class="section-inner">
+    <h2 class="sec-h" data-i18n="mod.h">Valoración por modalidad</h2>
+    <p class="lead" data-i18n="mod.intro">Paquetes específicos por deporte, en preparación. ¿Quieres una valoración ya? La diseñamos a tu medida.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚲</div>
+        <h3 data-i18n="mod.cyc.h">Ciclismo</h3>
+        <p data-i18n="mod.cyc.p">Paquete específico para ciclistas — en preparación.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏃</div>
+        <h3 data-i18n="mod.run.h">Carrera</h3>
+        <p data-i18n="mod.run.p">Paquete específico para corredores — en preparación.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏊</div>
+        <h3 data-i18n="mod.tri.h">Triatlón</h3>
+        <p data-i18n="mod.tri.p">Paquete específico para triatletas — en preparación.</p>
+      </div>
+    </div>
+    <p class="cross-link" data-i18n="pf.cross">¿Buscas valoración y desarrollo (incluida población infanto-juvenil)? Visita <a href="development.html"><span class="grad-text">LIVE</span><span class="sfx">development</span></a>.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo grad-text">LIVE</div>
+        <p class="footer-desc" data-i18n="foot.desc">Laboratorio Integral de Valoración y Ejercicio. Ciencia aplicada al rendimiento humano.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.servicesH">Servicios</h4>
+        <ul>
+          <li><a href="performance.html"><span class="grad-text">LIVE</span>performance</a></li>
+          <li><a href="development.html"><span class="grad-text">LIVE</span>development</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.labH">Lab</h4>
+        <ul>
+          <li data-i18n="foot.lines">Líneas de investigación</li>
+          <li data-i18n="nav.blog">Blog</li>
+          <li data-i18n="foot.pubs">Publicaciones</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="nav.contact">Contacto</h4>
+        <ul>
+          <li data-i18n="foot.book">Reservar cita</li>
+          <li>Instagram</li>
+          <li><a href="mailto:live.unavarra@gmail.com">live.unavarra@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 live.unavarra.es</span>
+      <span data-i18n="foot.legal"><a href="faq.html">Preguntas frecuentes</a> · <a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Política de privacidad</a> · <a href="legal.html#cookies">Cookies</a> · <a href="legal.html#accesibilidad">Accesibilidad</a> · <a href="#" data-cookie-settings>Configurar cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const I18N = {
+    eu: {
+      "nav.home":"Hasiera","nav.projects":"Proiektuak","nav.research":"Ikerketa","nav.blog":"Bloga","nav.contact":"Harremanetarako","nav.book":"Erreserbatu",
+      "pf.label":"Zerbitzuak",
+      "pf.hero":"Zure erantzun metabolikoa eta neuromuskularra neurtzen dugu ariketan, datuak errendimendu hobean bihurtzeko.",
+      "logos.head":"Lehen mailako ekipamendua aholkularitza aurreratu baterako",
+      "met.h":"Erantzun metabolikoa <span class=\"grad-text\">kardiorrespiratorio</span> ariketan",
+      "met.intro":"Zure organismoak ahaleginean nola erantzuten duen neurtzen dugu —oxigenoa, atalaseak eta erregaia— zure zonak eta estrategia zehaztasunez definitzeko.",
+      "met.sub":"Ariketarekiko erantzunaren interpretazioa",
+      "met.1.h":"Test gehikorra maximoa (VO₂max)",
+      "met.1.p":"Zure oxigeno-kontsumo maximoa eta zure potentzia aerobiko maximoa zehazten ditu, errapa progresibo batean nekea iritsi arte.",
+      "met.2.h":"Atalaseen berrespen-testa",
+      "met.2.p":"Zure atalase aerobiko eta anaerobikoak egiaztatzen ditu karga konstanteekin, zure entrenamendu-zonak zehaztasunez ainguratzeko.",
+      "met.3.h":"Energia-substratuen erabilera-testa (urrutiko proba luzeak)",
+      "met.3.p":"Intentsitate bakoitzean zenbat gantz eta zenbat hidrato erretzen dituzun kuantifikatzen du: funtsezkoa iraupen luzeko probetako estrategia nutrizionalerako.",
+      "met.acc1.q":"Norentzat da?",
+      "met.acc1.a":"Buruz entrenatu nahi duen hasiberritik zonak eta estrategia fintzen dabilen lehiaketako kirolarira. Protokoloa zure mailara eta helburura egokitzen dugu.",
+      "met.acc2.q":"Zer dakar?",
+      "met.acc2.a":"Zehaztasuneko zikloergometro batean proba progresibo bat, arnasketa-gasen analisiarekin eta laktato-laginekin. Zure helburuaren arabera, atalaseen berrespena edo erregai-erabileraren analisia gehitzen dugu.",
+      "met.acc3.q":"Zer eramaten duzu?",
+      "met.acc3.a":"Zure VO₂max, zure atalaseak eta zure zona pertsonalizatuak biltzen dituen txosten argia, zure entrenamendurako gomendio praktikoekin batera.",
+      "neu.h":"Erantzun <span class=\"grad-text\">neuromuskularra</span> ariketan",
+      "neu.intro":"Indarra, potentzia eta abiadura nola sortzen dituzun —eta nola nekatzen zaren— neurtzen dugu, indarra zehaztasunez entrenatzeko.",
+      "neu.1.h":"Karga–Abiadura–Potentzia kurbaren testa",
+      "neu.1.p":"Zure karga-abiadura erlazioa marrazten dugu, zure indar maximoa kalkulatzeko nekera iritsi gabe eta benetan zein abiaduratan entrenatzen duzun jakiteko.",
+      "neu.2.h":"Serie barneko nekearen testa",
+      "neu.2.p":"Serie barruan galdutako abiadura kuantifikatzen dugu, ahaleginaren eta nekearen neurri objektibo gisa, karga doseifikatzeko.",
+      "neu.3.h":"Indar-entrenamenduaren optimizazio-testa",
+      "neu.3.p":"Zure egokitzapena maximizatzen duen karga eta dosia zehazten dugu, zure helburuaren arabera: indarra, potentzia edo indar-erresistentzia.",
+      "neu.4.h":"Torke–Kadentzia testa (pedaleko indarra)",
+      "neu.4.p":"Kadentzia ezberdinetan pedalean ezartzen duzun indarra aztertzen dugu, zure txirrindularitzarako indar-profil espezifikoa ulertzeko.",
+      "mod.h":"Modalitatearen araberako balorazioa",
+      "mod.intro":"Kirol bakoitzerako pack espezifikoak, prestatzen ari gara. Balorazioa orain nahi duzu? Zure neurrira diseinatuko dugu.",
+      "mod.cyc.h":"Txirrindularitza","mod.cyc.p":"Txirrindularientzako pack espezifikoa — prestatzen.",
+      "mod.run.h":"Lasterketa","mod.run.p":"Lasterkarientzako pack espezifikoa — prestatzen.",
+      "mod.tri.h":"Triatloia","mod.tri.p":"Triatletentzako pack espezifikoa — prestatzen.",
+      "pf.cross":"Balorazioa eta garapena bilatzen dituzu (haur eta gazte populazioa barne)? Bisitatu <a href=\"development.html\"><span class=\"grad-text\">LIVE</span><span class=\"sfx\">development</span></a>.",
+      "foot.desc":"Balorazio eta Ariketarako Laborategi Integratua. Giza errendimenduari aplikatutako zientzia.",
+      "foot.servicesH":"Zerbitzuak","foot.labH":"Laborategia","foot.lines":"Ikerketa-lerroak","foot.pubs":"Argitalpenak","foot.book":"Hitzordua erreserbatu","foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Lege-oharra</a> · <a href=\"legal.html#privacidad\">Pribatutasun-politika</a> · <a href=\"legal.html#cookies\">Cookieak</a> · <a href=\"legal.html#accesibilidad\">Irisgarritasuna</a> · <a href=\"#\" data-cookie-settings>Cookieen ezarpenak</a>"
+    },
+    en: {
+    "nav.home":"Home","nav.projects":"Projects","nav.research":"Research","nav.blog":"Blog","nav.contact":"Contact","nav.book":"Book now",
+    "pf.label":"Services",
+    "pf.hero":"We measure your metabolic and neuromuscular response to exercise to turn data into better performance.",
+    "logos.head":"Top-tier equipment for advanced assessment",
+    "met.h":"Metabolic response to <span class=\"grad-text\">cardiorespiratory</span> exercise",
+    "met.intro":"We measure how your body responds to effort — oxygen, thresholds and fuel — to define your zones and your strategy with precision.",
+    "met.sub":"Interpreting your response to exercise",
+    "met.1.h":"Maximal incremental test (VO₂max)",
+    "met.1.p":"Determines your maximal oxygen uptake and your maximal aerobic power in a progressive ramp to exhaustion.",
+    "met.2.h":"Threshold confirmation test",
+    "met.2.p":"Confirms your aerobic and anaerobic thresholds with constant loads to precisely anchor your training zones.",
+    "met.3.h":"Substrate utilisation test (ultra-endurance)",
+    "met.3.p":"Quantifies how much fat and carbohydrate you burn at each intensity — key to fuelling strategy in long-duration events.",
+    "met.acc1.q":"Who is it for?",
+    "met.acc1.a":"From those starting out who want to train smart to the competitive athlete fine-tuning zones and strategy. We adapt the protocol to your level and your goal.",
+    "met.acc2.q":"What's involved?",
+    "met.acc2.a":"A progressive test on a precision cycle ergometer with breath-by-breath gas analysis and blood lactate sampling. Depending on your goal, we add threshold confirmation or fuel-use analysis.",
+    "met.acc3.q":"What you get",
+    "met.acc3.a":"A clear report with your VO₂max, your thresholds and your individualised zones, plus practical recommendations for your training.",
+    "neu.h":"<span class=\"grad-text\">Neuromuscular</span> response to exercise",
+    "neu.intro":"We measure how you produce force, power and speed — and how you fatigue — to train strength with precision.",
+    "neu.1.h":"Load–Velocity–Power profile test",
+    "neu.1.p":"We map your load–velocity relationship to estimate your maximal strength without going to failure and reveal the real velocity you train at.",
+    "neu.2.h":"Intra-set fatigue test",
+    "neu.2.p":"We quantify velocity loss within the set as an objective measure of effort and fatigue, to dose your load.",
+    "neu.3.h":"Strength-training optimisation test",
+    "neu.3.p":"We define the load and dose that maximise your adaptation for your goal: strength, power or strength-endurance.",
+    "neu.4.h":"Torque–Cadence test (pedal force)",
+    "neu.4.p":"We analyse the force you apply to the pedal at different cadences to understand your cycling-specific force profile.",
+    "mod.h":"Sport-specific assessment",
+    "mod.intro":"Sport-specific packages, in preparation. Want an assessment now? We'll tailor it to you.",
+    "mod.cyc.h":"Cycling","mod.cyc.p":"Cycling-specific package — in preparation.",
+    "mod.run.h":"Running","mod.run.p":"Running-specific package — in preparation.",
+    "mod.tri.h":"Triathlon","mod.tri.p":"Triathlon-specific package — in preparation.",
+    "pf.cross":"Looking for assessment and development (including children and youth)? Visit <a href=\"development.html\"><span class=\"grad-text\">LIVE</span><span class=\"sfx\">development</span></a>.",
+    "foot.desc":"Integrated Laboratory for Assessment and Exercise. Science applied to human performance.",
+    "foot.servicesH":"Services","foot.labH":"Lab","foot.lines":"Research lines","foot.pubs":"Publications","foot.book":"Book an appointment","foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Legal notice</a> · <a href=\"legal.html#privacidad\">Privacy policy</a> · <a href=\"legal.html#cookies\">Cookies</a> · <a href=\"legal.html#accesibilidad\">Accessibility</a> · <a href=\"#\" data-cookie-settings>Cookie settings</a>"
+    }
+  };
+  const ES = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { ES[el.dataset.i18n] = el.innerHTML; });
+  const LANGS=['es','en','eu'];
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.dataset.i18n, v = lang==='es' ? ES[k] : (I18N[lang]?.[k] ?? ES[k]);
+      if (v != null) el.innerHTML = v;
+    });
+    document.querySelectorAll('#langToggle [data-lang]').forEach(s => s.classList.toggle('active', s.dataset.lang===lang));
+    try { localStorage.setItem('liveunavarra-lang', lang); } catch(e){}
+  }
+  document.getElementById('langToggle').addEventListener('click', () => { const next=LANGS[(LANGS.indexOf(document.documentElement.lang)+1)%LANGS.length]; setLang(next); });
+  const navToggle=document.getElementById('navToggle'), navLinks=document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { const o = navToggle.classList.toggle('open'); navLinks.classList.toggle('open'); navToggle.setAttribute('aria-expanded', o); });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded', false); navLinks.classList.remove('open'); }));
+  try { const saved=localStorage.getItem('liveunavarra-lang'); if (saved==='en'||saved==='eu') setLang(saved); } catch(e){}
+</script>
+<script src="cookies.js" defer></script>
+
+</body>
+</html>

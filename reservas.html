@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservar cita | LIVE Lab</title>
+<meta name="description" content="Reserva tu cita en el LIVE Lab (UPNA), Pamplona. Elige LIVEperformance (rendimiento) o LIVEdevelopment (valoración y desarrollo).">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2DD4BF">
+<link rel="canonical" href="https://live.unavarra.es/reservas.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LIVE Lab">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://live.unavarra.es/reservas.html">
+<meta property="og:title" content="Reservar cita | LIVE Lab">
+<meta property="og:description" content="Elige LIVEperformance o LIVEdevelopment y reserva tu cita — UPNA, Pamplona.">
+<meta property="og:image" content="https://live.unavarra.es/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reservar cita | LIVE Lab">
+<meta name="twitter:description" content="Reserva tu cita en el LIVE Lab.">
+<meta name="twitter:image" content="https://live.unavarra.es/og-image.png">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Inicio","item":"https://live.unavarra.es/"},
+  {"@type":"ListItem","position":2,"name":"Reservar","item":"https://live.unavarra.es/reservas.html"}]}
+</script>
+<link rel="stylesheet" href="fonts.css">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:#2DD4BF; --orange:#FB923C; --coral:#F43F5E; --blue:#818CF8;
+    --white:#FAFAFA; --gray-50:#F3F4F6; --gray-100:#E5E7EB; --gray-200:#E5E7EB;
+    --gray-400:#6B7280; --gray-600:#4B5563; --gray-900:#111827; --matte:#1A1A1A;
+    --gradient: linear-gradient(90deg, var(--teal), var(--orange), var(--coral), var(--blue));
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family:'Inter',sans-serif; background:var(--white); color:var(--gray-900); line-height:1.6; }
+  .grad-text { background:var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .grad-bar { height:3px; background:var(--gradient); border-radius:2px; }
+  .grad-btn { background:var(--gradient); color:white; border:none; padding:14px 32px; border-radius:8px; font-size:15px; font-weight:600; cursor:pointer; letter-spacing:.01em; transition:opacity .2s; }
+  .grad-btn:hover { opacity:.88; }
+
+  nav { position:sticky; top:0; z-index:100; background:rgba(250,250,250,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--gray-100); padding:0 48px; display:flex; align-items:center; justify-content:space-between; height:68px; }
+  .nav-logo { font-size:28px; font-weight:800; letter-spacing:-.03em; text-decoration:none; }
+  .nav-brandlock { display:flex; align-items:center; gap:12px; }
+  .nav-divider { width:1px; height:26px; background:var(--gray-100); }
+  .nav-upna { height:30px; width:auto; display:block; }
+  .nav-links { display:flex; gap:28px; list-style:none; font-size:14px; font-weight:700; color:#1A1A1A; align-items:center; }
+  .nav-links a { text-decoration:none; color:inherit; transition:color .15s; }
+  .nav-links a:hover, .nav-links a.current { color:var(--gray-900); }
+  .nav-links a.nav-brand { font-weight:800; letter-spacing:-.02em; }
+  .nav-links a.nav-brand .sfx { color:#1A1A1A; }
+  .nav-right { display:flex; align-items:center; gap:16px; }
+  .lang-toggle { font-size:13px; font-weight:600; color:var(--gray-400); cursor:pointer; padding:4px 10px; border:1px solid var(--gray-100); border-radius:6px; user-select:none; }
+  .lang-toggle .active { color:var(--gray-900); }
+  .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+  .nav-toggle span { width:22px; height:2px; background:var(--gray-900); border-radius:2px; transition:transform .25s,opacity .25s; }
+  .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2){ opacity:0; }
+  .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  .r-hero { max-width:900px; margin:0 auto; padding:72px 48px 8px; text-align:center; }
+  .r-hero .section-label { font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-400); margin-bottom:14px; }
+  .r-hero h1 { font-size:44px; font-weight:800; letter-spacing:-.03em; line-height:1.1; margin-bottom:16px; }
+  .r-hero p { font-size:18px; color:var(--gray-600); max-width:600px; margin:0 auto; line-height:1.65; }
+  .section-divider { max-width:900px; margin:0 auto; padding:0 48px; }
+
+  .booking { max-width:900px; margin:0 auto; padding:40px 48px 64px; }
+  .book-cards { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .book-card { border:1px solid var(--gray-100); border-radius:18px; padding:40px 32px; text-align:center; background:#fff; box-shadow:0 8px 32px rgba(17,24,39,.05); display:flex; flex-direction:column; align-items:center; gap:16px; transition:transform .2s, box-shadow .2s; }
+  .book-card:hover { transform:translateY(-2px); box-shadow:0 14px 44px rgba(17,24,39,.08); }
+  .bc-mark { font-weight:800; letter-spacing:-.02em; font-size:30px; line-height:1; }
+  .bc-mark .sfx { color:var(--matte); }
+  .book-card p { font-size:15px; color:var(--gray-600); max-width:300px; }
+  .book-card .grad-btn { width:100%; max-width:260px; }
+  .book-card .grad-btn[disabled] { opacity:.45; cursor:not-allowed; }
+  .bc-soon { font-size:13px; color:var(--gray-400); }
+  .bc-soon a { color:var(--gray-600); }
+  .back-link { background:none; border:none; color:var(--gray-600); font-weight:700; cursor:pointer; font-size:14px; margin-bottom:14px; padding:6px 0; }
+  .cal-box { min-height:560px; border:1px solid var(--gray-100); border-radius:16px; overflow:hidden; background:#fff; }
+  .privacy-note { max-width:900px; margin:18px auto 0; padding:0 48px; font-size:12.5px; color:var(--gray-400); text-align:center; }
+  .privacy-note a { color:var(--gray-600); }
+
+  footer { background:var(--gray-900); color:white; padding:56px 48px 36px; }
+  .footer-inner { max-width:1100px; margin:0 auto; }
+  .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,.08); }
+  .footer-logo { font-size:24px; font-weight:800; letter-spacing:-.02em; margin-bottom:16px; }
+  .footer-desc { font-size:14px; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px; }
+  .footer-col h4 { font-size:13px; font-weight:600; margin-bottom:18px; color:rgba(255,255,255,.7); }
+  .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .footer-col ul li { font-size:14px; color:rgba(255,255,255,.62); transition:color .15s; }
+  .footer-col ul li:hover { color:white; }
+  .footer-col ul li a { color:inherit; text-decoration:none; }
+  .footer-bottom { padding-top:28px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-size:13px; color:rgba(255,255,255,.62); }
+  .footer-bottom a { color:rgba(255,255,255,.68); text-decoration:none; }
+  .footer-bottom a:hover { color:#fff; text-decoration:underline; }
+
+  @media (max-width:900px){
+    nav { padding:0 24px; }
+    .nav-toggle { display:flex; }
+    .nav-links { position:absolute; top:68px; left:0; right:0; flex-direction:column; gap:0; background:var(--white); border-bottom:1px solid var(--gray-100); padding:8px 0; display:none; align-items:stretch; }
+    .nav-links.open { display:flex; }
+    .nav-links a { display:block; padding:14px 24px; }
+    .r-hero { padding:52px 24px 8px; } .r-hero h1 { font-size:34px; }
+    .section-divider, .booking, .privacy-note { padding-left:24px; padding-right:24px; }
+    footer { padding:48px 24px 28px; } .footer-top { grid-template-columns:1fr 1fr; gap:28px; }
+  }
+  @media (max-width:700px){ .book-cards { grid-template-columns:1fr; } }
+  @media (max-width:560px){ .footer-top { grid-template-columns:1fr; gap:24px; } .footer-bottom { flex-direction:column; align-items:flex-start; gap:8px; } }
+</style>
+</head>
+<body>
+<a href="#top" class="skip-link">Saltar al contenido</a>
+<style>.skip-link{position:absolute;left:-9999px;top:0;background:#111827;color:#fff;padding:10px 16px;border-radius:0 0 8px 0;font-size:14px;font-weight:700;z-index:10000;text-decoration:none;}.skip-link:focus{left:0;}</style>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brandlock">
+    <a href="index.html#top" class="nav-logo grad-text">LIVE</a>
+    <span class="nav-divider"></span>
+    <img class="nav-upna" src="upna-logo.png" alt="Universidad Pública de Navarra">
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#top" data-i18n="nav.home">Inicio</a></li>
+    <li><a href="performance.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">performance</span></a></li>
+    <li><a href="development.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">development</span></a></li>
+    <li><a href="index.html#proyectos" data-i18n="nav.research">Investigación</a></li>
+    <li><a href="index.html#blog" data-i18n="nav.blog">Blog</a></li>
+    <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle" id="langToggle" title="Cambiar idioma / Switch language">
+      <span class="active" data-lang="es">ES</span> / <span data-lang="en">EN</span> / <span data-lang="eu">EUS</span>
+    </div>
+    <a href="reservas.html" class="grad-btn current" style="padding:10px 22px; font-size:14px; display:inline-block; text-decoration:none;" data-i18n="nav.book">Reservar</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="r-hero" id="top">
+  <div class="section-label" data-i18n="rv.label">Reservas</div>
+  <h1 data-i18n="rv.h1">Reserva tu <span class="grad-text">cita</span></h1>
+  <p data-i18n="rv.sub">Elige el área y reserva con la persona responsable. Confirmación inmediata y recordatorio automático.</p>
+</div>
+<div class="section-divider"><div class="grad-bar"></div></div>
+
+<!-- BOOKING -->
+<section class="booking">
+  <div class="book-cards" id="bookCards">
+    <div class="book-card">
+      <div class="bc-mark"><span class="grad-text">LIVE</span><span class="sfx">performance</span></div>
+      <p data-i18n="rv.perf.p">Valoración y optimización del rendimiento deportivo.</p>
+      <button type="button" class="grad-btn" data-area="performance" data-i18n="rv.cta">Reservar</button>
+      <span class="bc-soon" data-i18n="rv.soon" hidden>Próximamente · <a href="mailto:live.unavarra@gmail.com">escríbenos</a></span>
+    </div>
+    <div class="book-card">
+      <div class="bc-mark"><span class="grad-text">LIVE</span><span class="sfx">development</span></div>
+      <p data-i18n="rv.dev.p">Valoración y desarrollo de capacidades, con foco infanto-juvenil.</p>
+      <button type="button" class="grad-btn" data-area="development" data-i18n="rv.cta">Reservar</button>
+      <span class="bc-soon" data-i18n="rv.soon" hidden>Próximamente · <a href="mailto:live.unavarra@gmail.com">escríbenos</a></span>
+    </div>
+  </div>
+  <div id="cal-wrap" style="display:none;">
+    <button type="button" class="back-link" id="calBack" data-i18n="rv.back">← Volver a elegir área</button>
+    <div id="cal-inline" class="cal-box"></div>
+  </div>
+</section>
+<p class="privacy-note" data-i18n="rv.priv">Al reservar se carga la agenda de Cal.com (un tercero). Más info en la <a href="legal.html#cookies">política de cookies</a>.</p>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo grad-text">LIVE</div>
+        <p class="footer-desc" data-i18n="foot.desc">Laboratorio Integral de Valoración y Ejercicio. Ciencia aplicada al rendimiento humano.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.servicesH">Servicios</h4>
+        <ul>
+          <li><a href="performance.html"><span class="grad-text">LIVE</span>performance</a></li>
+          <li><a href="development.html"><span class="grad-text">LIVE</span>development</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.labH">Lab</h4>
+        <ul>
+          <li data-i18n="foot.lines">Líneas de investigación</li>
+          <li data-i18n="nav.blog">Blog</li>
+          <li data-i18n="foot.pubs">Publicaciones</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="nav.contact">Contacto</h4>
+        <ul>
+          <li><a href="reservas.html" data-i18n="foot.book">Reservar cita</a></li>
+          <li>Instagram</li>
+          <li><a href="mailto:live.unavarra@gmail.com">live.unavarra@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 live.unavarra.es</span>
+      <span data-i18n="foot.legal"><a href="faq.html">Preguntas frecuentes</a> · <a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Política de privacidad</a> · <a href="legal.html#cookies">Cookies</a> · <a href="legal.html#accesibilidad">Accesibilidad</a> · <a href="#" data-cookie-settings>Configurar cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ====== Cal.com — UN ENLACE POR ÁREA ======
+     Cada área tiene su propia cuenta de Cal.com (su persona + su Google Calendar).
+     Pon el usuario/enlace de cada una (sin "https://cal.com/"). Deja "" si aún no existe. */
+  const CAL = {
+    performance: "laboratorio-live-y5nyma",  /* ⚠️ confirma: ¿esta cuenta es la de performance o la de development? */
+    development: ""                          /* ← pon aquí el 2º Cal.com cuando lo creéis */
+  };
+
+  let calScriptLoaded = false;
+  function loadCalScript(){
+    if (calScriptLoaded) return; calScriptLoaded = true;
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://cal.com" });
+  }
+  function openArea(area){
+    var link = CAL[area]; if (!link) return;
+    if (window.cookieConsent) window.cookieConsent.grant("external");  // consentimiento en contexto
+    document.getElementById("bookCards").style.display = "none";
+    document.getElementById("cal-wrap").style.display = "";
+    var box = document.getElementById("cal-inline"); box.innerHTML = "";
+    loadCalScript();
+    Cal("inline", { elementOrSelector: "#cal-inline", calLink: link });
+    Cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  const I18N = {
+    eu: {
+      "nav.home":"Hasiera","nav.research":"Ikerketa","nav.blog":"Bloga","nav.contact":"Harremanetarako","nav.book":"Erreserbatu",
+      "rv.label":"Erreserbak","rv.h1":"Erreserbatu zure <span class=\"grad-text\">hitzordua</span>",
+      "rv.sub":"Aukeratu arloa eta erreserbatu arduradunarekin. Berrespen berehalakoa eta gogorarazpen automatikoa.",
+      "rv.perf.p":"Kirol errendimenduaren balorazioa eta optimizazioa.",
+      "rv.dev.p":"Gaitasunen balorazioa eta garapena, haur eta gazteei begira bereziki.",
+      "rv.cta":"Erreserbatu","rv.soon":"Laster · <a href=\"mailto:live.unavarra@gmail.com\">idatzi guri</a>",
+      "rv.back":"← Itzuli arloa aukeratzera",
+      "rv.priv":"Erreserbatzean Cal.com agenda (hirugarren bat) kargatzen da. Informazio gehiago gure <a href=\"legal.html#cookies\">cookie-politikan</a>.",
+      "foot.desc":"Balorazio eta Ariketarako Laborategi Integratua. Giza errendimenduari aplikatutako zientzia.",
+      "foot.servicesH":"Zerbitzuak","foot.labH":"Laborategia","foot.lines":"Ikerketa-lerroak","foot.pubs":"Argitalpenak","foot.book":"Hitzordua erreserbatu","foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Lege-oharra</a> · <a href=\"legal.html#privacidad\">Pribatutasun-politika</a> · <a href=\"legal.html#cookies\">Cookieak</a> · <a href=\"legal.html#accesibilidad\">Irisgarritasuna</a> · <a href=\"#\" data-cookie-settings>Cookieen ezarpenak</a>"
+    },
+    en: {
+    "nav.home":"Home","nav.research":"Research","nav.blog":"Blog","nav.contact":"Contact","nav.book":"Book now",
+    "rv.label":"Booking","rv.h1":"Book your <span class=\"grad-text\">appointment</span>",
+    "rv.sub":"Choose the area and book with the person in charge. Instant confirmation and automatic reminder.",
+    "rv.perf.p":"Assessment and optimisation of sports performance.",
+    "rv.dev.p":"Assessment and development of capacities, with a focus on children and youth.",
+    "rv.cta":"Book","rv.soon":"Coming soon · <a href=\"mailto:live.unavarra@gmail.com\">contact us</a>",
+    "rv.back":"← Back to choose area",
+    "rv.priv":"Booking loads the Cal.com scheduler (a third party). More in our <a href=\"legal.html#cookies\">cookie policy</a>.",
+    "foot.desc":"Integrated Laboratory for Assessment and Exercise. Science applied to human performance.",
+    "foot.servicesH":"Services","foot.labH":"Lab","foot.lines":"Research lines","foot.pubs":"Publications","foot.book":"Book an appointment","foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Legal notice</a> · <a href=\"legal.html#privacidad\">Privacy policy</a> · <a href=\"legal.html#cookies\">Cookies</a> · <a href=\"legal.html#accesibilidad\">Accessibility</a> · <a href=\"#\" data-cookie-settings>Cookie settings</a>"
+    }
+  };
+  const ES = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { ES[el.dataset.i18n] = el.innerHTML; });
+  const LANGS=['es','en','eu'];
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const k=el.dataset.i18n, v=lang==='es'?ES[k]:(I18N[lang]?.[k]??ES[k]); if(v!=null) el.innerHTML=v; });
+    document.querySelectorAll('#langToggle [data-lang]').forEach(s => s.classList.toggle('active', s.dataset.lang===lang));
+    try { localStorage.setItem('liveunavarra-lang', lang); } catch(e){}
+  }
+  document.getElementById('langToggle').addEventListener('click', () => { const next=LANGS[(LANGS.indexOf(document.documentElement.lang)+1)%LANGS.length]; setLang(next); });
+  const navToggle=document.getElementById('navToggle'), navLinks=document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { const o = navToggle.classList.toggle('open'); navLinks.classList.toggle('open'); navToggle.setAttribute('aria-expanded', o); });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded', false); navLinks.classList.remove('open'); }));
+  try { const saved=localStorage.getItem('liveunavarra-lang'); if (saved==='en'||saved==='eu') setLang(saved); } catch(e){}
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.book-card').forEach(function(card){
+      var btn = card.querySelector('button[data-area]');
+      var area = btn.dataset.area;
+      if (!CAL[area]) {
+        btn.disabled = true;
+        var soon = card.querySelector('.bc-soon'); if (soon) soon.hidden = false;
+      } else {
+        btn.addEventListener('click', function(){ openArea(area); });
+      }
+    });
+    var back = document.getElementById('calBack');
+    if (back) back.addEventListener('click', function(){
+      document.getElementById('cal-wrap').style.display = 'none';
+      document.getElementById('cal-inline').innerHTML = '';
+      document.getElementById('bookCards').style.display = '';
+    });
+  });
+</script>
+<script src="cookies.js" defer></script>
+
+</body>
+</html>

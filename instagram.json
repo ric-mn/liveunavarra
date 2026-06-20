@@ -1,0 +1,13 @@
+{
+  "profile": { "username": "live.lab" },
+  "updated": "2026-06-15T12:00:00Z",
+  "note": "DATOS DE EJEMPLO — se sustituyen automáticamente por la GitHub Action al desplegar (ver SETUP_INSTAGRAM.md).",
+  "posts": [
+    { "caption": "Perfil carga–velocidad en sentadilla 📊", "permalink": "https://instagram.com/live.lab" },
+    { "caption": "Valoración de la condición física infantil 🏃", "permalink": "https://instagram.com/live.lab" },
+    { "caption": "Ciencia aplicada al rendimiento ⚡", "permalink": "https://instagram.com/live.lab" },
+    { "caption": "Función ejecutiva y ejercicio 🧠", "permalink": "https://instagram.com/live.lab" },
+    { "caption": "Día de tests en el laboratorio 🔬", "permalink": "https://instagram.com/live.lab" },
+    { "caption": "Desarrollo deportivo a largo plazo 📈", "permalink": "https://instagram.com/live.lab" }
+  ]
+}

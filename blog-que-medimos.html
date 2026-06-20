@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué medimos en una valoración? | Blog LIVE Lab</title>
+<meta name="description" content="Qué información sale de una valoración en el LIVE Lab y cómo se traduce en decisiones de entrenamiento: umbrales, capacidad aeróbica, perfil de fuerza y más.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2DD4BF">
+<link rel="canonical" href="https://live.unavarra.es/blog-que-medimos.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LIVE Lab">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://live.unavarra.es/blog-que-medimos.html">
+<meta property="og:title" content="¿Qué medimos en una valoración?">
+<meta property="og:description" content="De los datos del laboratorio a decisiones de entrenamiento.">
+<meta property="og:image" content="https://live.unavarra.es/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿Qué medimos en una valoración? | LIVE Lab">
+<meta name="twitter:description" content="De los datos del laboratorio a decisiones de entrenamiento.">
+<meta name="twitter:image" content="https://live.unavarra.es/og-image.png">
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"Article",
+  "headline":"¿Qué medimos en una valoración?",
+  "description":"Qué información sale de una valoración en el LIVE Lab y cómo se traduce en decisiones de entrenamiento.",
+  "inLanguage":"es",
+  "datePublished":"2026-06-17","dateModified":"2026-06-17",
+  "author":{"@type":"Organization","name":"LIVE Lab"},
+  "publisher":{"@type":"Organization","name":"LIVE Lab — Universidad Pública de Navarra"},
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://live.unavarra.es/blog-que-medimos.html"},
+  "image":"https://live.unavarra.es/og-image.png" }
+</script>
+<script type="application/ld+json">
+{ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Inicio","item":"https://live.unavarra.es/"},
+  {"@type":"ListItem","position":2,"name":"Blog","item":"https://live.unavarra.es/blog.html"},
+  {"@type":"ListItem","position":3,"name":"¿Qué medimos en una valoración?","item":"https://live.unavarra.es/blog-que-medimos.html"}]}
+</script>
+<link rel="stylesheet" href="fonts.css">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal:#2DD4BF; --orange:#FB923C; --coral:#F43F5E; --blue:#818CF8;
+    --white:#FAFAFA; --gray-50:#F3F4F6; --gray-100:#E5E7EB; --gray-200:#E5E7EB;
+    --gray-400:#6B7280; --gray-600:#4B5563; --gray-900:#111827; --matte:#1A1A1A;
+    --gradient: linear-gradient(90deg, var(--teal), var(--orange), var(--coral), var(--blue));
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family:'Inter',sans-serif; background:var(--white); color:var(--gray-900); line-height:1.7; }
+  .grad-text { background:var(--gradient); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .grad-btn { background:var(--gradient); color:white; border:none; padding:14px 32px; border-radius:8px; font-size:15px; font-weight:600; cursor:pointer; letter-spacing:.01em; transition:opacity .2s; display:inline-block; text-decoration:none; }
+  .grad-btn:hover { opacity:.88; }
+
+  nav { position:sticky; top:0; z-index:100; background:rgba(250,250,250,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--gray-100); padding:0 48px; display:flex; align-items:center; justify-content:space-between; height:68px; }
+  .nav-logo { font-size:28px; font-weight:800; letter-spacing:-.03em; text-decoration:none; }
+  .nav-brandlock { display:flex; align-items:center; gap:12px; }
+  .nav-divider { width:1px; height:26px; background:var(--gray-100); }
+  .nav-upna { height:30px; width:auto; display:block; }
+  .nav-links { display:flex; gap:28px; list-style:none; font-size:14px; font-weight:700; color:#1A1A1A; align-items:center; }
+  .nav-links a { text-decoration:none; color:inherit; transition:color .15s; }
+  .nav-links a:hover, .nav-links a.current { color:var(--gray-900); }
+  .nav-links a.nav-brand { font-weight:800; letter-spacing:-.02em; }
+  .nav-links a.nav-brand .sfx { color:#1A1A1A; }
+  .nav-right { display:flex; align-items:center; gap:16px; }
+  .lang-toggle { font-size:13px; font-weight:600; color:var(--gray-400); cursor:pointer; padding:4px 10px; border:1px solid var(--gray-100); border-radius:6px; user-select:none; }
+  .lang-toggle .active { color:var(--gray-900); }
+  .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+  .nav-toggle span { width:22px; height:2px; background:var(--gray-900); border-radius:2px; transition:transform .25s,opacity .25s; }
+  .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2){ opacity:0; }
+  .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  .article { max-width:720px; margin:0 auto; padding:56px 24px 72px; }
+  .crumb { font-size:13px; color:var(--gray-400); margin-bottom:18px; }
+  .crumb a { color:var(--gray-600); text-decoration:none; }
+  .a-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:4px 10px; border-radius:100px; background:var(--gray-50); color:var(--gray-600); margin-bottom:14px; }
+  .article h1 { font-size:40px; font-weight:800; letter-spacing:-.03em; line-height:1.12; margin-bottom:14px; }
+  .a-meta { font-size:13.5px; color:var(--gray-400); margin-bottom:30px; }
+  .a-lead { font-size:19px; color:var(--gray-900); line-height:1.6; margin-bottom:30px; }
+  .article h2 { font-size:23px; font-weight:800; letter-spacing:-.01em; margin:34px 0 12px; }
+  .article p { font-size:17px; color:var(--gray-600); margin-bottom:18px; }
+  .article ul { margin:0 0 18px 22px; }
+  .article li { font-size:17px; color:var(--gray-600); margin-bottom:8px; }
+  .article strong { color:var(--gray-900); }
+  .a-cta { margin:40px 0 0; padding:28px 32px; border:1px solid var(--gray-100); border-radius:16px; background:var(--gray-50); text-align:center; }
+  .a-cta p { font-size:16px; color:var(--gray-900); margin-bottom:16px; }
+  .a-note { margin-top:40px; padding-top:20px; border-top:1px solid var(--gray-100); font-size:13px; color:var(--gray-400); }
+  .a-back { display:inline-block; margin-top:24px; font-size:14px; font-weight:700; color:var(--gray-900); text-decoration:none; }
+
+  footer { background:var(--gray-900); color:white; padding:56px 48px 36px; }
+  .footer-inner { max-width:1100px; margin:0 auto; }
+  .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,.08); }
+  .footer-logo { font-size:24px; font-weight:800; letter-spacing:-.02em; margin-bottom:16px; }
+  .footer-desc { font-size:14px; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px; }
+  .footer-col h4 { font-size:13px; font-weight:600; margin-bottom:18px; color:rgba(255,255,255,.7); }
+  .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .footer-col ul li { font-size:14px; color:rgba(255,255,255,.62); transition:color .15s; }
+  .footer-col ul li:hover { color:white; }
+  .footer-col ul li a { color:inherit; text-decoration:none; }
+  .footer-bottom { padding-top:28px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-size:13px; color:rgba(255,255,255,.62); }
+  .footer-bottom a { color:rgba(255,255,255,.68); text-decoration:none; }
+  .footer-bottom a:hover { color:#fff; text-decoration:underline; }
+
+  @media (max-width:900px){
+    nav { padding:0 24px; }
+    .nav-toggle { display:flex; }
+    .nav-links { position:absolute; top:68px; left:0; right:0; flex-direction:column; gap:0; background:var(--white); border-bottom:1px solid var(--gray-100); padding:8px 0; display:none; align-items:stretch; }
+    .nav-links.open { display:flex; }
+    .nav-links a { display:block; padding:14px 24px; }
+    .article h1 { font-size:31px; }
+    footer { padding:48px 24px 28px; } .footer-top { grid-template-columns:1fr 1fr; gap:28px; }
+  }
+  @media (max-width:560px){ .footer-top { grid-template-columns:1fr; gap:24px; } .footer-bottom { flex-direction:column; align-items:flex-start; gap:8px; } }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
+<style>.skip-link{position:absolute;left:-9999px;top:0;background:#111827;color:#fff;padding:10px 16px;border-radius:0 0 8px 0;font-size:14px;font-weight:700;z-index:10000;text-decoration:none;}.skip-link:focus{left:0;}</style>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brandlock">
+    <a href="index.html#top" class="nav-logo grad-text">LIVE</a>
+    <span class="nav-divider"></span>
+    <img class="nav-upna" src="upna-logo.png" alt="Universidad Pública de Navarra">
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#top" data-i18n="nav.home">Inicio</a></li>
+    <li><a href="performance.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">performance</span></a></li>
+    <li><a href="development.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">development</span></a></li>
+    <li><a href="index.html#proyectos" data-i18n="nav.research">Investigación</a></li>
+    <li><a href="index.html#blog" data-i18n="nav.blog">Blog</a></li>
+    <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle" id="langToggle" title="Cambiar idioma / Switch language">
+      <span class="active" data-lang="es">ES</span> / <span data-lang="en">EN</span> / <span data-lang="eu">EUS</span>
+    </div>
+    <a href="reservas.html" class="grad-btn" style="padding:10px 22px; font-size:14px;" data-i18n="nav.book">Reservar</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<article class="article" id="main">
+  <div class="crumb"><a href="blog.html" data-i18n="po.crumb">← Blog</a></div>
+  <span class="a-tag" data-i18n="po.tag">Casos y servicios</span>
+  <h1>¿Qué medimos en una valoración?</h1>
+  <div class="a-meta"><span data-i18n="po.meta">Artículo de ejemplo · Equipo LIVE Lab</span></div>
+
+  <p class="a-lead">Una valoración no es un número suelto: es una <strong>foto precisa de cómo responde tu cuerpo al esfuerzo</strong>. A partir de esa foto, el entrenamiento deja de ser una suposición y pasa a tener referencias objetivas.</p>
+
+  <h2>Qué sale de una sesión</h2>
+  <p>Según el objetivo, una valoración puede incluir:</p>
+  <ul>
+    <li><strong>Tus umbrales y capacidad aeróbica</strong> — a qué intensidades puedes sostener el esfuerzo y dónde están tus zonas de entrenamiento.</li>
+    <li><strong>Tu perfil de fuerza</strong> — cuánta fuerza produces y a qué velocidad, sin necesidad de llegar al fallo.</li>
+    <li><strong>Cómo te fatigas</strong> — para dosificar la carga con criterio en lugar de a ojo.</li>
+  </ul>
+
+  <h2>De los datos a decisiones</h2>
+  <p>Lo importante no es el dato, sino lo que haces con él. Cada valoración termina con un <strong>informe claro y recomendaciones prácticas</strong>: tus zonas, tus referencias y qué priorizar en las próximas semanas. Y al repetirla, comparas y compruebas si el plan funciona.</p>
+
+  <div class="a-cta">
+    <p data-i18n="po.cta.p">¿Quieres saber qué cuenta tu fisiología?</p>
+    <a href="reservas.html" class="grad-btn" data-i18n="po.cta.btn">Reservar una valoración</a>
+  </div>
+
+  <p class="a-note" data-i18n="po.note">Artículo de ejemplo (plantilla). Sustituye este texto por contenido real; la estructura, el SEO y el diseño ya están listos.</p>
+  <a href="blog.html" class="a-back" data-i18n="po.back">← Volver al blog</a>
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo grad-text">LIVE</div>
+        <p class="footer-desc" data-i18n="foot.desc">Laboratorio Integral de Valoración y Ejercicio. Ciencia aplicada al rendimiento humano.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.servicesH">Servicios</h4>
+        <ul>
+          <li><a href="performance.html"><span class="grad-text">LIVE</span>performance</a></li>
+          <li><a href="development.html"><span class="grad-text">LIVE</span>development</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.labH">Lab</h4>
+        <ul>
+          <li data-i18n="foot.lines">Líneas de investigación</li>
+          <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+          <li data-i18n="foot.pubs">Publicaciones</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="nav.contact">Contacto</h4>
+        <ul>
+          <li><a href="reservas.html" data-i18n="foot.book">Reservar cita</a></li>
+          <li>Instagram</li>
+          <li><a href="mailto:live.unavarra@gmail.com">live.unavarra@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 live.unavarra.es</span>
+      <span data-i18n="foot.legal"><a href="faq.html">Preguntas frecuentes</a> · <a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Política de privacidad</a> · <a href="legal.html#cookies">Cookies</a> · <a href="legal.html#accesibilidad">Accesibilidad</a> · <a href="#" data-cookie-settings>Configurar cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const I18N = {
+    eu: {
+      "nav.home":"Hasiera","nav.research":"Ikerketa","nav.blog":"Bloga","nav.contact":"Harremanetarako","nav.book":"Erreserbatu",
+      "po.crumb":"← Bloga","po.tag":"Kasuak eta zerbitzuak","po.meta":"Adibide-artikulua · LIVE Lab taldea",
+      "po.cta.p":"Zure fisiologiak zer kontatzen duen jakin nahi duzu?","po.cta.btn":"Erreserbatu balorazio bat",
+      "po.note":"Adibide-artikulua (txantiloia). Ordeztu testu hau benetako edukiarekin; egitura, SEOa eta diseinua jada prest daude.",
+      "po.back":"← Itzuli blogera",
+      "foot.desc":"Balorazio eta Ariketarako Laborategi Integratua. Giza errendimenduari aplikatutako zientzia.",
+      "foot.servicesH":"Zerbitzuak","foot.labH":"Laborategia","foot.lines":"Ikerketa-lerroak","foot.pubs":"Argitalpenak","foot.book":"Hitzordua erreserbatu","foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Lege-oharra</a> · <a href=\"legal.html#privacidad\">Pribatutasun-politika</a> · <a href=\"legal.html#cookies\">Cookieak</a> · <a href=\"legal.html#accesibilidad\">Irisgarritasuna</a> · <a href=\"#\" data-cookie-settings>Cookieen ezarpenak</a>"
+    },
+    en: {
+    "nav.home":"Home","nav.research":"Research","nav.blog":"Blog","nav.contact":"Contact","nav.book":"Book now",
+    "po.crumb":"← Blog","po.tag":"Cases & services","po.meta":"Sample article · LIVE Lab team",
+    "po.cta.p":"Want to know what your physiology says?","po.cta.btn":"Book an assessment",
+    "po.note":"Sample article (template). Replace this text with real content; the structure, SEO and design are already in place.",
+    "po.back":"← Back to the blog",
+    "foot.desc":"Integrated Laboratory for Assessment and Exercise. Science applied to human performance.",
+    "foot.servicesH":"Services","foot.labH":"Lab","foot.lines":"Research lines","foot.pubs":"Publications","foot.book":"Book an appointment","foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Legal notice</a> · <a href=\"legal.html#privacidad\">Privacy policy</a> · <a href=\"legal.html#cookies\">Cookies</a> · <a href=\"legal.html#accesibilidad\">Accessibility</a> · <a href=\"#\" data-cookie-settings>Cookie settings</a>"
+    }
+  };
+  const ES = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { ES[el.dataset.i18n] = el.innerHTML; });
+  const LANGS=['es','en','eu'];
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const k=el.dataset.i18n, v=lang==='es'?ES[k]:(I18N[lang]?.[k]??ES[k]); if(v!=null) el.innerHTML=v; });
+    document.querySelectorAll('#langToggle [data-lang]').forEach(s => s.classList.toggle('active', s.dataset.lang===lang));
+    try { localStorage.setItem('liveunavarra-lang', lang); } catch(e){}
+  }
+  document.getElementById('langToggle').addEventListener('click', () => { const next=LANGS[(LANGS.indexOf(document.documentElement.lang)+1)%LANGS.length]; setLang(next); });
+  const navToggle=document.getElementById('navToggle'), navLinks=document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => { const o = navToggle.classList.toggle('open'); navLinks.classList.toggle('open'); navToggle.setAttribute('aria-expanded', o); });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded', false); navLinks.classList.remove('open'); }));
+  try { const saved=localStorage.getItem('liveunavarra-lang'); if (saved==='en'||saved==='eu') setLang(saved); } catch(e){}
+</script>
+<script src="cookies.js" defer></script>
+
+</body>
+</html>

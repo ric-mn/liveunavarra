@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIVE Lab · Valoración y rendimiento deportivo en Pamplona (Navarra)</title>
+<meta name="description" content="Laboratorio Integral de Valoración y Ejercicio (UPNA). Valoración fisiológica, optimización del rendimiento, consultoría e investigación aplicada al deporte en Pamplona, Navarra.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2DD4BF">
+<link rel="canonical" href="https://live.unavarra.es/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LIVE Lab">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://live.unavarra.es/">
+<meta property="og:title" content="LIVE Lab · Valoración y rendimiento deportivo en Pamplona">
+<meta property="og:description" content="Ciencia aplicada al rendimiento humano: valoración fisiológica, optimización del rendimiento, consultoría e investigación. UPNA, Navarra.">
+<meta property="og:image" content="https://live.unavarra.es/og-image.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LIVE Lab · Valoración y rendimiento deportivo">
+<meta name="twitter:description" content="Ciencia aplicada al rendimiento humano. Laboratorio Integral de Valoración y Ejercicio (UPNA), Pamplona.">
+<meta name="twitter:image" content="https://live.unavarra.es/og-image.png">
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SportsActivityLocation",
+      "@id": "https://live.unavarra.es/#lab",
+      "name": "LIVE Lab — Laboratorio Integral de Valoración y Ejercicio",
+      "alternateName": "LIVE Lab",
+      "url": "https://live.unavarra.es/",
+      "image": "https://live.unavarra.es/og-image.png",
+      "description": "Laboratorio de valoración fisiológica, optimización del rendimiento, consultoría e investigación aplicada al deporte.",
+      "parentOrganization": { "@type": "CollegeOrUniversity", "name": "Universidad Pública de Navarra" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Campus de Arrosadía",
+        "addressLocality": "Pamplona",
+        "addressRegion": "Navarra",
+        "postalCode": "31006",
+        "addressCountry": "ES"
+      },
+      "areaServed": { "@type": "AdministrativeArea", "name": "Navarra" },
+      "knowsLanguage": ["es", "en"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://live.unavarra.es/#website",
+      "url": "https://live.unavarra.es/",
+      "name": "LIVE Lab",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://live.unavarra.es/#lab" }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="fonts.css">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --teal:    #2DD4BF;
+    --orange:  #FB923C;
+    --coral:   #F43F5E;
+    --blue:    #818CF8;
+    --white:   #FAFAFA;
+    --gray-50: #F3F4F6;
+    --gray-100:#E5E7EB;
+    --gray-200:#E5E7EB;
+    --gray-400:#6B7280;
+    --gray-600:#4B5563;
+    --gray-900:#111827;
+    --gradient: linear-gradient(90deg, var(--teal), var(--orange), var(--coral), var(--blue));
+  }
+
+  html { scroll-behavior: smooth; }
+  [id] { scroll-margin-top: 88px; }   /* offset for the sticky nav */
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* ── GRADIENT UTILS ── */
+  .grad-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .grad-bar {
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 2px;
+  }
+  .grad-btn {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: opacity .2s;
+  }
+  .grad-btn:hover { opacity: .88; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,250,250,.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-100);
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+  }
+  .nav-brandlock { display: flex; align-items: center; gap: 12px; }
+  .nav-divider { width: 1px; height: 26px; background: var(--gray-100); }
+  .nav-upna { height: 30px; width: auto; display: block; }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1A1A1A;
+  }
+  .nav-links a { text-decoration: none; color: inherit; transition: color .15s; }
+  .nav-links a:hover { color: var(--gray-900); }
+  .nav-links a.nav-brand { font-weight: 800; letter-spacing: -.02em; }
+  .nav-links a.nav-brand .sfx { color: #1A1A1A; }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .lang-toggle {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-400);
+    cursor: pointer;
+    padding: 4px 10px;
+    border: 1px solid var(--gray-100);
+    border-radius: 6px;
+    user-select: none;
+  }
+  .lang-toggle .active { color: var(--gray-900); }
+  /* hamburger (mobile only) */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .nav-toggle span {
+    width: 22px; height: 2px;
+    background: var(--gray-900);
+    border-radius: 2px;
+    transition: transform .25s, opacity .25s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 96px 48px 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-100);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-600);
+    margin-bottom: 32px;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gradient);
+  }
+  .hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    max-width: 780px;
+    margin-bottom: 24px;
+  }
+  .hero p {
+    font-size: 19px;
+    color: var(--gray-600);
+    max-width: 560px;
+    margin-bottom: 40px;
+    line-height: 1.65;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-outline {
+    padding: 14px 32px;
+    border-radius: 8px;
+    border: 1.5px solid var(--gray-200);
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-900);
+    cursor: pointer;
+    transition: border-color .15s;
+  }
+  .btn-outline:hover { border-color: var(--gray-400); }
+  .hero-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--gray-400);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ── GRAD DIVIDER ── */
+  .section-divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 96px 48px;
+  }
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  /* ── INSTAGRAM FEED ── */
+  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ig-item { position: relative; aspect-ratio: 1/1; border-radius: 14px; overflow: hidden; display: block; background: var(--gray-100); text-decoration: none; }
+  .ig-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+  .ig-item:hover img { transform: scale(1.04); }
+  .ig-ph { width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 16px; color: #fff; font-size: 13px; font-weight: 600; line-height: 1.4; background: var(--gradient); }
+  .ig-item .ig-cap { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 14px; font-size: 12px; line-height: 1.4; color: #fff; background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 55%); opacity: 0; transition: opacity .2s; }
+  .ig-item:hover .ig-cap { opacity: 1; }
+  @media (max-width: 560px) { .ig-grid { grid-template-columns: repeat(2, 1fr); } }
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 17px;
+    color: var(--gray-600);
+    max-width: 520px;
+    margin-bottom: 56px;
+    line-height: 1.65;
+  }
+
+  /* ── SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .service-card {
+    background: white;
+    border: 1px solid var(--gray-100);
+    border-radius: 16px;
+    padding: 32px;
+    transition: box-shadow .2s, transform .2s;
+    cursor: pointer;
+  }
+  .service-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,.06);
+    transform: translateY(-2px);
+  }
+  .service-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: var(--gray-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .service-card p {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+  .service-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: var(--gray-50);
+    color: var(--gray-400);
+  }
+  .service-tag.free {
+    background: #ECFDF5;
+    color: #059669;
+  }
+
+  /* ── COSTE CERO BANNER ── */
+  .zero-cost {
+    background: var(--gray-900);
+    color: white;
+    border-radius: 24px;
+    padding: 64px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .zero-cost::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(45,212,191,.25) 0%, transparent 70%);
+  }
+  .zero-cost::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: 80px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(129,140,248,.2) 0%, transparent 70%);
+  }
+  .zero-cost h2 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+  }
+  .zero-cost p {
+    font-size: 16px;
+    color: rgba(255,255,255,.7);
+    margin-top: 16px;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+  }
+  .zero-cost-right {
+    position: relative;
+    z-index: 1;
+  }
+  .zero-cost-right .grad-btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .zero-cost-right small {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,.62);
+  }
+
+  /* ── PROJECTS ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .project-card {
+    border: 1px solid var(--gray-100);
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    transition: box-shadow .2s;
+  }
+  .project-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.06); }
+  .project-img {
+    height: 180px;
+    background: var(--gray-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .project-body { padding: 28px; }
+  .project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #059669;
+    background: #ECFDF5;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 12px;
+  }
+  .project-status::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #10B981;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; }
+    50% { opacity: .4; }
+  }
+  .project-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .project-body p {
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .project-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--gray-400);
+    flex-wrap: wrap;
+  }
+
+  /* ── BLOG ── */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .blog-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid var(--gray-100);
+    transition: box-shadow .2s;
+  }
+  .blog-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.06); }
+  .blog-img {
+    height: 160px;
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+  .blog-body { padding: 24px; }
+  .blog-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 10px;
+  }
+  .blog-body h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .blog-body p {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--gray-400);
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-100);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--gray-900);
+    color: white;
+    padding: 64px 48px 40px;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .footer-logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .footer-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,.5);
+    line-height: 1.7;
+    max-width: 280px;
+  }
+  .footer-col h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,.7);
+  }
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .footer-col ul li {
+    font-size: 14px;
+    color: rgba(255,255,255,.62);
+    cursor: pointer;
+    transition: color .15s;
+  }
+  .footer-col ul li:hover { color: white; }
+  .footer-col ul li a { color: inherit; text-decoration: none; }
+  .footer-col ul li a:hover { color: white; }
+  .footer-bottom {
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: rgba(255,255,255,.62);
+  }
+  .footer-bottom a { color: rgba(255,255,255,.68); text-decoration: none; }
+  .footer-bottom a:hover { color: #fff; text-decoration: underline; }
+
+  /* ── MOCKUP LABEL ── */
+  .mockup-label {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--gray-900);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 24px rgba(0,0,0,.2);
+    z-index: 999;
+  }
+  .mockup-label span { opacity: .5; }
+
+  /* ════════ RESPONSIVE ════════ */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-toggle { display: flex; }
+    .nav-links {
+      position: absolute;
+      top: 68px; left: 0; right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-100);
+      padding: 8px 0;
+      display: none;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { padding: 0; }
+    .nav-links a { display: block; padding: 14px 24px; }
+    .nav-links a:hover { background: var(--gray-50); }
+
+    .hero { padding: 64px 24px 56px; }
+    .hero h1 { font-size: 40px; }
+    .hero p { font-size: 17px; }
+    .section-divider { padding: 0 24px; }
+    section { padding: 64px 24px; }
+    .section-title { font-size: 30px; }
+    .section-sub { margin-bottom: 40px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .zero-cost { grid-template-columns: 1fr; padding: 40px 32px; gap: 28px; }
+    .zero-cost h2 { font-size: 28px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    footer { padding: 56px 24px 32px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 32px; }
+    .hero-ctas { flex-direction: column; align-items: stretch; }
+    .hero-ctas .grad-btn, .hero-ctas .btn-outline { width: 100%; }
+    .services-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .mockup-label { bottom: 16px; right: 16px; }
+  }
+</style>
+</head>
+<body>
+<a href="#top" class="skip-link">Saltar al contenido</a>
+<style>.skip-link{position:absolute;left:-9999px;top:0;background:#111827;color:#fff;padding:10px 16px;border-radius:0 0 8px 0;font-size:14px;font-weight:700;z-index:10000;text-decoration:none;}.skip-link:focus{left:0;}</style>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brandlock">
+    <a href="#top" class="nav-logo grad-text">LIVE</a>
+    <span class="nav-divider"></span>
+    <img class="nav-upna" src="upna-logo.png" alt="Universidad Pública de Navarra">
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#top" data-i18n="nav.home">Inicio</a></li>
+    <li><a href="performance.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">performance</span></a></li>
+    <li><a href="development.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">development</span></a></li>    <li><a href="#proyectos" data-i18n="nav.research">Investigación</a></li>
+    <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
+    <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle" id="langToggle" title="Cambiar idioma / Switch language">
+      <span class="active" data-lang="es">ES</span> / <span data-lang="en">EN</span> / <span data-lang="eu">EUS</span>
+    </div>
+    <a href="reservas.html" class="grad-btn" style="padding: 10px 22px; font-size: 14px; display:inline-block; text-decoration:none;" data-i18n="nav.book">Reservar</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-badge" data-i18n="hero.badge">Laboratorio Integral de Valoración y Ejercicio</div>
+  <h1 data-i18n="hero.h1">Ciencia del ejercicio al servicio del <span class="grad-text">rendimiento y el desarrollo</span></h1>
+  <p data-i18n="hero.p">Evaluamos, investigamos y optimizamos el rendimiento humano con equipamiento científico de alto nivel. Para deportistas, clubes y profesionales que quieren respuestas reales.</p>
+  <div class="hero-ctas">
+    <button class="grad-btn" data-i18n="hero.cta1">Quiero una evaluación</button>
+    <button class="btn-outline" data-i18n="hero.cta2">Soy un club u organización →</button>
+  </div>
+  <div class="hero-note" data-i18n="hero.note">
+    ✦ Algunos estudios tienen <strong style="color:var(--gray-900); margin: 0 4px">coste cero</strong> para el deportista
+  </div>
+</div>
+
+<div class="section-divider"><div class="grad-bar"></div></div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="serv.label">Servicios</div>
+    <div class="section-title" data-i18n="serv.title">Lo que hacemos <span class="grad-text">por ti</span></div>
+    <div class="section-sub" data-i18n="serv.sub">Cada servicio está diseñado con rigor científico y adaptado a tus objetivos reales, no a protocolos genéricos.</div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3 data-i18n="serv.1.h">Evaluación y Valoración</h3>
+        <p data-i18n="serv.1.p">Análisis completo de tu condición física con equipamiento de precisión científica. Obtienes datos reales, no estimaciones.</p>
+        <div class="service-tag" data-i18n="serv.1.tag">Desde 60 min</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3 data-i18n="serv.2.h">Sesiones de Optimización</h3>
+        <p data-i18n="serv.2.p">Trabajamos directamente sobre tu proceso de entrenamiento para mejorar la eficiencia y los resultados.</p>
+        <div class="service-tag" data-i18n="serv.2.tag">Personalizado</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔬</div>
+        <h3 data-i18n="serv.3.h">Participación en Estudios</h3>
+        <p data-i18n="serv.3.p">Forma parte de investigación real. Accedes a tecnología de alto nivel y contribuyes al avance científico.</p>
+        <div class="service-tag free" data-i18n="serv.3.tag">Coste cero disponible</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏆</div>
+        <h3 data-i18n="serv.4.h">Proyectos Llave en Mano</h3>
+        <p data-i18n="serv.4.p">Diseñamos e implementamos el programa completo de valoración para tu club o federación.</p>
+        <div class="service-tag" data-i18n="serv.4.tag">Para organizaciones</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💡</div>
+        <h3 data-i18n="serv.5.h">Consultoría Científica</h3>
+        <p data-i18n="serv.5.p">Analizamos tu proceso o resultado actual y proponemos mejoras basadas en evidencia.</p>
+        <div class="service-tag" data-i18n="serv.5.tag">A medida</div>
+      </div>
+      <div class="service-card" style="border: 1.5px dashed var(--gray-100); background: var(--gray-50);">
+        <div class="service-icon" style="background: white;">🗓️</div>
+        <h3 data-i18n="serv.6.h">Reserva tu sesión</h3>
+        <p data-i18n="serv.6.p">Elige el servicio, selecciona fecha y hora. Confirmación inmediata y recordatorio automático.</p>
+        <a href="reservas.html" class="grad-btn" style="margin-top: 16px; width: 100%; display:inline-block; text-align:center; text-decoration:none; box-sizing:border-box;" data-i18n="serv.6.btn">Ver disponibilidad</a>
+      </div>
+    </div>
+    <div style="margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="performance.html" class="grad-btn" style="display:inline-block; text-decoration:none;" data-i18n="serv.cta1">Ver LIVEperformance →</a>
+      <a href="development.html" class="btn-outline" style="display:inline-block; text-decoration:none;" data-i18n="serv.cta2">Ver LIVEdevelopment →</a>
+    </div>
+  </div>
+</section>
+
+<!-- COSTE CERO BANNER -->
+<section style="padding: 0 48px 96px;">
+  <div class="zero-cost">
+    <div>
+      <h2 data-i18n="zero.h">Participa en un estudio.<br><span class="grad-text">Sin coste.</span></h2>
+      <p data-i18n="zero.p">Algunos de nuestros proyectos ofrecen evaluaciones completas a cambio de tu participación como sujeto de investigación. Ciencia real que también te beneficia a ti.</p>
+    </div>
+    <div class="zero-cost-right">
+      <button class="grad-btn" data-i18n="zero.btn">Ver estudios disponibles</button>
+      <small data-i18n="zero.small">Plazas limitadas · Sin compromiso</small>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS ACTIVOS -->
+<section id="proyectos" style="background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="proj.label">Proyectos activos</div>
+    <div class="section-title" data-i18n="proj.title">Investigación <span class="grad-text">en marcha</span></div>
+    <div class="section-sub" data-i18n="proj.sub">Proyectos abiertos en los que puedes participar o seguir su evolución.</div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-img" data-i18n="proj.1.img">📸 Foto equipamiento</div>
+        <div class="project-body">
+          <div class="project-status" data-i18n="proj.1.status">Buscando participantes</div>
+          <h3 data-i18n="proj.1.h">Perfil de carga-velocidad en deportes de equipo</h3>
+          <p data-i18n="proj.1.p">Análisis de la relación entre carga y velocidad en jugadores de fútbol sala. Valoración gratuita para los participantes seleccionados.</p>
+          <div class="project-meta">
+            <span data-i18n="proj.1.m1">⏱ 2 sesiones</span>
+            <span data-i18n="proj.1.m2">👥 12 plazas</span>
+            <span>📍 Ed. El Sario, Pamplona</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img" data-i18n="proj.2.img">📸 Foto protocolo</div>
+        <div class="project-body">
+          <div class="project-status" data-i18n="proj.2.status">En progreso</div>
+          <h3 data-i18n="proj.2.h">Optimización del entrenamiento de fuerza en resistencia</h3>
+          <p data-i18n="proj.2.p">Estudio longitudinal sobre la transferencia del entrenamiento de fuerza al rendimiento en deportes de resistencia.</p>
+          <div class="project-meta">
+            <span data-i18n="proj.2.m1">⏱ 12 semanas</span>
+            <span data-i18n="proj.2.m2">👥 8 plazas</span>
+            <span>📍 Ed. El Sario, Pamplona</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="blog.label">Blog científico</div>
+    <div class="section-title" data-i18n="blog.title">La investigación, <span class="grad-text">explicada</span></div>
+    <div class="section-sub" data-i18n="blog.sub">Cada publicación científica convertida en contenido que cualquier deportista puede entender y aplicar.</div>
+
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-img">📈</div>
+        <div class="blog-body">
+          <div class="blog-tag" data-i18n="blog.1.tag">Fuerza · Velocidad</div>
+          <h3 data-i18n="blog.1.h">¿Por qué la velocidad al levantar importa más que el peso?</h3>
+          <p data-i18n="blog.1.p">Nuestro último estudio analiza la relación entre la carga y la velocidad de ejecución en deportistas de alto rendimiento.</p>
+          <div class="blog-footer">
+            <span data-i18n="blog.read5">5 min lectura</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🫀</div>
+        <div class="blog-body">
+          <div class="blog-tag" data-i18n="blog.2.tag">Resistencia · VO₂max</div>
+          <h3 data-i18n="blog.2.h">Cómo predecir el rendimiento en una maratón con una sola prueba de laboratorio</h3>
+          <p data-i18n="blog.2.p">Exploramos la validez predictiva de nuestro protocolo incremental para pruebas de larga distancia.</p>
+          <div class="blog-footer">
+            <span data-i18n="blog.read7">7 min lectura</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">💪</div>
+        <div class="blog-body">
+          <div class="blog-tag" data-i18n="blog.3.tag">Recuperación · HRV</div>
+          <h3 data-i18n="blog.3.h">La variabilidad de la frecuencia cardíaca como guía del entrenamiento diario</h3>
+          <p data-i18n="blog.3.p">Revisamos la evidencia actual y explicamos cómo usar el HRV para tomar mejores decisiones de entrenamiento.</p>
+          <div class="blog-footer">
+            <span data-i18n="blog.read6">6 min lectura</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="blog.html" class="btn-outline" style="display:inline-block; text-decoration:none;" data-i18n="blog.all">Ver todas las publicaciones →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM FEED -->
+<section id="instagram" style="background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100);">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="ig.label">Instagram</div>
+    <div class="section-title" data-i18n="ig.title">El día a día del <span class="grad-text">laboratorio</span></div>
+    <div class="section-sub" data-i18n="ig.sub">Valoraciones, ciencia aplicada y novedades. Síguenos para no perderte nada.</div>
+    <div class="ig-grid" id="ig-grid"></div>
+    <div style="margin-top: 32px;">
+      <a class="grad-btn" id="ig-follow" href="https://instagram.com/live.lab" target="_blank" rel="noopener" style="display:inline-block; text-decoration:none;" data-i18n="ig.follow">Seguir en Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo grad-text">LIVE</div>
+        <p class="footer-desc" data-i18n="foot.desc">Laboratorio Integral de Valoración y Ejercicio. Ciencia aplicada al rendimiento humano.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.servicesH">Servicios</h4>
+        <ul>
+          <li data-i18n="serv.1.h">Evaluación y Valoración</li>
+          <li data-i18n="serv.2.h">Sesiones de Optimización</li>
+          <li data-i18n="foot.studies">Estudios (coste cero)</li>
+          <li data-i18n="serv.4.h">Proyectos Llave en Mano</li>
+          <li data-i18n="foot.consulting">Consultoría</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.labH">Lab</h4>
+        <ul>
+          <li data-i18n="foot.lines">Líneas de investigación</li>
+          <li data-i18n="nav.blog">Blog</li>
+          <li data-i18n="foot.pubs">Publicaciones</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="nav.contact">Contacto</h4>
+        <ul>
+          <li data-i18n="foot.book">Reservar cita</li>
+          <li>Instagram</li>
+          <li>Patreon</li>
+          <li><a href="mailto:live.unavarra@gmail.com">live.unavarra@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 live.unavarra.es</span>
+      <span data-i18n="foot.legal"><a href="faq.html">Preguntas frecuentes</a> · <a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Política de privacidad</a> · <a href="legal.html#cookies">Cookies</a> · <a href="legal.html#accesibilidad">Accesibilidad</a> · <a href="#" data-cookie-settings>Configurar cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mockup-label">LIVE Lab <span>· Mockup v2 · Pepper</span></div>
+
+<script>
+  // ── i18n (ES default; EN/EU translations) ──────────────────────────────
+  const I18N = {
+    eu: {
+      "nav.home":"Hasiera", "nav.services":"Zerbitzuak", "nav.projects":"Proiektuak", "nav.equipment":"Ekipamendua",
+      "nav.research":"Ikerketa", "nav.blog":"Bloga", "nav.contact":"Harremanetarako", "nav.book":"Erreserbatu",
+      "hero.badge":"Balorazio eta Ariketarako Laborategi Integratua",
+      "hero.h1":"Ariketa zientzia <span class=\"grad-text\">errendimenduaren eta garapenaren zerbitzura</span>",
+      "hero.p":"Giza errendimendua baloratu, ikertu eta optimizatzen dugu goi-mailako ekipamendu zientifikoarekin. Erantzun errealak nahi dituzten kirolari, kluben eta profesionalentzat.",
+      "hero.cta1":"Balorazio bat nahi dut", "hero.cta2":"Klub edo erakunde bat naiz →",
+      "hero.note":"✦ Ikasketa batzuk <strong style=\"color:var(--gray-900); margin: 0 4px\">kostu zerorekin</strong> dira kirolariarentzat",
+      "serv.label":"Zerbitzuak", "serv.title":"Zuretzat egiten duguna <span class=\"grad-text\">zuretzat</span>",
+      "serv.sub":"Zerbitzu bakoitza zorroztasun zientifikoarekin eraikia dago eta zure benetako helburuetara egokitua, protokolo generikoetara ez.",
+      "serv.1.h":"Ebaluazioa eta Balorazioa", "serv.1.p":"Zure kondizio fisikoaren azterketa osoa, zehaztasun zientifikoko ekipamenduarekin. Datu errealak lortzen dituzu, ez estimazioak.", "serv.1.tag":"60 min-tik aurrera",
+      "serv.2.h":"Optimizazio-saioak", "serv.2.p":"Zure entrenamendu-prozesuan zuzenean lan egiten dugu, eraginkortasuna eta emaitzak hobetzeko.", "serv.2.tag":"Pertsonalizatua",
+      "serv.3.h":"Ikerketetan Parte-hartzea", "serv.3.p":"Benetako ikerketaren parte izan. Goi-mailako teknologiarako sarbidea duzu eta aurrerapen zientifikora ekarpena egiten duzu.", "serv.3.tag":"Kostu zero eskuragarri",
+      "serv.4.h":"Giltza Eskuan Proiektuak", "serv.4.p":"Zure klub edo federaziorako balorazio-programa osoa diseinatu eta ezartzen dugu.", "serv.4.tag":"Erakundeentzat",
+      "serv.5.h":"Aholkularitza Zientifikoa", "serv.5.p":"Zure prozesu edo emaitza egungoa aztertzen dugu eta ebidentzian oinarritutako hobekuntzak proposatzen ditugu.", "serv.5.tag":"Neurrira",
+      "serv.6.h":"Erreserbatu zure saioa", "serv.6.p":"Aukeratu zerbitzua, hautatu data eta ordua. Berrespen berehalakoa eta gogorarazpen automatikoa.", "serv.6.btn":"Eskuragarritasuna ikusi",
+      "serv.cta1":"LIVEperformance ikusi →", "serv.cta2":"LIVEdevelopment ikusi →",
+      "ig.label":"Instagram", "ig.title":"Laborategiko <span class=\"grad-text\">eguneroko</span> bizitza", "ig.sub":"Balorazioak, zientzia aplikatua eta berriak. Jarraitu guri ezer galdu nahi ez baduzu.", "ig.follow":"Instagramen jarraitu →",
+      "zero.h":"Ikerketa batean parte hartu.<br><span class=\"grad-text\">Kosturik gabe.</span>",
+      "zero.p":"Gure proiektu batzuek balorazio osoak eskaintzen dituzte zure parte-hartzearen truke ikerketako subjektu gisa. Zuri ere onura ekartzen dizun benetako zientzia.",
+      "zero.btn":"Eskuragarri dauden ikerketak ikusi", "zero.small":"Leku mugatuak · Konpromisorik gabe",
+      "proj.label":"Proiektu aktiboak", "proj.title":"Ikerketa <span class=\"grad-text\">martxan</span>",
+      "proj.sub":"Parte hartu edo jarraipena egin dezakezun proiektu irekiak.",
+      "proj.1.img":"📸 Ekipamenduaren argazkia", "proj.1.status":"Parte-hartzaileak bilatzen",
+      "proj.1.h":"Karga-abiadura profila talde-kiroletan", "proj.1.p":"Futbol saloiko jokalarien karga eta abiadura erlazioaren azterketa. Doako balorazioa hautatutako parte-hartzaileentzat.",
+      "proj.1.m1":"⏱ 2 saio", "proj.1.m2":"👥 12 leku",
+      "proj.2.img":"📸 Protokoloaren argazkia", "proj.2.status":"Martxan",
+      "proj.2.h":"Indar-entrenamenduaren optimizazioa erresistentzian", "proj.2.p":"Indar-entrenamenduak erresistentzia-kiroletako errendimendura duen transferentziari buruzko ikerketa longitudinala.",
+      "proj.2.m1":"⏱ 12 aste", "proj.2.m2":"👥 8 leku",
+      "blog.label":"Zientzia bloga", "blog.title":"Ikerketa, <span class=\"grad-text\">azalduta</span>",
+      "blog.sub":"Argitalpen zientifiko bakoitza edozein kirolarik ulertu eta aplikatu dezakeen eduki bihurtuta.",
+      "blog.1.tag":"Indarra · Abiadura", "blog.1.h":"Zergatik altxatzeko abiadura pisua baino garrantzitsuagoa da?", "blog.1.p":"Gure azken ikerketak karga eta exekuzio-abiaduraren arteko erlazioa aztertzen du errendimendu altuko kirolarietan.", "blog.1.date":"2025eko maiatzaren 15a",
+      "blog.2.tag":"Erresistentzia · VO₂max", "blog.2.h":"Maratoiko errendimendua nola aurreikusi laborategiko proba bakar batekin", "blog.2.p":"Gure protokolo gehikorraren balio aurreikuslea aztertzen dugu distantzia luzeko probetarako.", "blog.2.date":"2025eko maiatzaren 2a",
+      "blog.3.tag":"Berreskuratzea · HRV", "blog.3.h":"Bihotz-maiztasunaren aldakortasuna eguneroko entrenamendurako gida gisa", "blog.3.p":"Egungo ebidentzia berrikusten dugu eta HRV nola erabili azaltzen dugu entrenamendu-erabaki hobeak hartzeko.", "blog.3.date":"2025eko apirilaren 18a",
+      "blog.read5":"5 min irakurketa", "blog.read6":"6 min irakurketa", "blog.read7":"7 min irakurketa", "blog.all":"Argitalpen guztiak ikusi →",
+      "foot.desc":"Balorazio eta Ariketarako Laborategi Integratua. Giza errendimenduari aplikatutako zientzia.",
+      "foot.servicesH":"Zerbitzuak", "foot.studies":"Ikerketak (kostu zero)", "foot.consulting":"Aholkularitza",
+      "foot.labH":"Laborategia", "foot.lines":"Ikerketa-lerroak", "foot.pubs":"Argitalpenak",
+      "foot.book":"Hitzordua erreserbatu", "foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Lege-oharra</a> · <a href=\"legal.html#privacidad\">Pribatutasun-politika</a> · <a href=\"legal.html#cookies\">Cookieak</a> · <a href=\"legal.html#accesibilidad\">Irisgarritasuna</a> · <a href=\"#\" data-cookie-settings>Cookieen ezarpenak</a>"
+    },
+    en: {
+      "nav.home":"Home", "nav.services":"Services", "nav.projects":"Projects", "nav.equipment":"Equipment",
+      "nav.research":"Research", "nav.blog":"Blog", "nav.contact":"Contact", "nav.book":"Book now",
+      "hero.badge":"Integrated Laboratory for Assessment and Exercise",
+      "hero.h1":"Exercise science at the service of <span class=\"grad-text\">performance and development</span>",
+      "hero.p":"We assess, research and optimise human performance with high-end scientific equipment. For athletes, clubs and professionals who want real answers.",
+      "hero.cta1":"I want an assessment", "hero.cta2":"I'm a club or organisation →",
+      "hero.note":"✦ Some studies are <strong style=\"color:var(--gray-900); margin: 0 4px\">cost-free</strong> for the athlete",
+      "serv.label":"Services", "serv.title":"What we do <span class=\"grad-text\">for you</span>",
+      "serv.sub":"Every service is built on scientific rigour and tailored to your real goals, not generic protocols.",
+      "serv.1.h":"Assessment & Testing", "serv.1.p":"A complete analysis of your physical condition with scientific-precision equipment. You get real data, not estimates.", "serv.1.tag":"From 60 min",
+      "serv.2.h":"Optimisation Sessions", "serv.2.p":"We work directly on your training process to improve efficiency and results.", "serv.2.tag":"Personalised",
+      "serv.3.h":"Study Participation", "serv.3.p":"Be part of real research. Access high-end technology and contribute to scientific progress.", "serv.3.tag":"Cost-free available",
+      "serv.4.h":"Turnkey Projects", "serv.4.p":"We design and implement the full testing programme for your club or federation.", "serv.4.tag":"For organisations",
+      "serv.5.h":"Scientific Consulting", "serv.5.p":"We analyse your current process or results and propose evidence-based improvements.", "serv.5.tag":"Bespoke",
+      "serv.6.h":"Book your session", "serv.6.p":"Choose the service, pick a date and time. Instant confirmation and an automatic reminder.", "serv.6.btn":"See availability",
+      "serv.cta1":"See LIVEperformance →", "serv.cta2":"See LIVEdevelopment →",
+      "ig.label":"Instagram", "ig.title":"Inside the <span class=\"grad-text\">lab</span>", "ig.sub":"Assessments, applied science and updates. Follow us so you don't miss a thing.", "ig.follow":"Follow on Instagram →",
+      "zero.h":"Join a study.<br><span class=\"grad-text\">At no cost.</span>",
+      "zero.p":"Some of our projects offer complete assessments in exchange for your participation as a research subject. Real science that benefits you too.",
+      "zero.btn":"See available studies", "zero.small":"Limited spots · No commitment",
+      "proj.label":"Active projects", "proj.title":"Research <span class=\"grad-text\">under way</span>",
+      "proj.sub":"Open projects you can join or follow.",
+      "proj.1.img":"📸 Equipment photo", "proj.1.status":"Recruiting participants",
+      "proj.1.h":"Load–velocity profile in team sports", "proj.1.p":"Analysis of the load–velocity relationship in futsal players. Free assessment for selected participants.",
+      "proj.1.m1":"⏱ 2 sessions", "proj.1.m2":"👥 12 spots",
+      "proj.2.img":"📸 Protocol photo", "proj.2.status":"In progress",
+      "proj.2.h":"Optimising strength training for endurance", "proj.2.p":"A longitudinal study on the transfer of strength training to endurance performance.",
+      "proj.2.m1":"⏱ 12 weeks", "proj.2.m2":"👥 8 spots",
+      "blog.label":"Science blog", "blog.title":"Research, <span class=\"grad-text\">explained</span>",
+      "blog.sub":"Every scientific publication turned into content any athlete can understand and apply.",
+      "blog.1.tag":"Strength · Velocity", "blog.1.h":"Why the speed you lift matters more than the weight", "blog.1.p":"Our latest study analyses the relationship between load and movement velocity in high-performance athletes.", "blog.1.date":"15 May 2025",
+      "blog.2.tag":"Endurance · VO₂max", "blog.2.h":"How to predict marathon performance from a single lab test", "blog.2.p":"We explore the predictive validity of our incremental protocol for long-distance events.", "blog.2.date":"2 May 2025",
+      "blog.3.tag":"Recovery · HRV", "blog.3.h":"Heart-rate variability as a daily training guide", "blog.3.p":"We review the current evidence and explain how to use HRV to make better training decisions.", "blog.3.date":"18 April 2025",
+      "blog.read5":"5 min read", "blog.read6":"6 min read", "blog.read7":"7 min read", "blog.all":"See all publications →",
+      "foot.desc":"Integrated Laboratory for Assessment and Exercise. Science applied to human performance.",
+      "foot.servicesH":"Services", "foot.studies":"Studies (cost-free)", "foot.consulting":"Consulting",
+      "foot.labH":"Lab", "foot.lines":"Research lines", "foot.pubs":"Publications",
+      "foot.book":"Book an appointment", "foot.legal":"<a href=\"faq.html\">FAQ</a> · <a href=\"legal.html#aviso-legal\">Legal notice</a> · <a href=\"legal.html#privacidad\">Privacy policy</a> · <a href=\"legal.html#cookies\">Cookies</a> · <a href=\"legal.html#accesibilidad\">Accessibility</a> · <a href=\"#\" data-cookie-settings>Cookie settings</a>"
+    }
+  };
+  // capture the original Spanish (innerHTML) so we can switch back
+  const ES = {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { ES[el.dataset.i18n] = el.innerHTML; });
+
+  const LANGS = ['es', 'en', 'eu'];
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.dataset.i18n;
+      const v = lang === 'es' ? ES[k] : (I18N[lang]?.[k] ?? ES[k]);
+      if (v != null) el.innerHTML = v;
+    });
+    document.querySelectorAll('#langToggle [data-lang]').forEach(s =>
+      s.classList.toggle('active', s.dataset.lang === lang));
+    try { localStorage.setItem('liveunavarra-lang', lang); } catch (e) {}
+  }
+
+  document.getElementById('langToggle').addEventListener('click', () => {
+    const next = LANGS[(LANGS.indexOf(document.documentElement.lang) + 1) % LANGS.length];
+    setLang(next);
+  });
+
+  // ── mobile nav (hamburger) ──────────────────────────────────────────
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', false);
+    navLinks.classList.remove('open');
+  }));
+
+  // ── restore saved language ──────────────────────────────────────────
+  try {
+    const saved = localStorage.getItem('liveunavarra-lang');
+    if (saved === 'en' || saved === 'eu') setLang(saved);
+  } catch (e) {}
+</script>
+<script src="cookies.js" defer></script>
+<script src="instagram.js" defer></script>
+
+</body>
+</html>
