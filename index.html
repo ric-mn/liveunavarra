@@ -156,6 +156,7 @@
     align-items: center;
     gap: 16px;
   }
+  .nav-book-mobile { display: none; }
   .lang-toggle {
     font-size: 13px;
     font-weight: 600;
@@ -165,6 +166,7 @@
     border: 1px solid var(--gray-100);
     border-radius: 6px;
     user-select: none;
+    white-space: nowrap;
   }
   .lang-toggle .active { color: var(--gray-900); }
   /* hamburger (mobile only) */
@@ -269,15 +271,26 @@
     max-width: 1100px;
     margin: 0 auto;
   }
-  /* ── INSTAGRAM FEED ── */
-  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .ig-item { position: relative; aspect-ratio: 1/1; border-radius: 14px; overflow: hidden; display: block; background: var(--gray-100); text-decoration: none; }
+  /* ── SOCIAL (Instagram + Strava, compacto) ── */
+  .social-compact { padding: 56px 48px; }
+  .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .social-card { background: #fff; border: 1px solid var(--gray-100); border-radius: 16px; padding: 20px; }
+  .social-card-head { display: flex; align-items: center; gap: 12px; }
+  .social-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #fff; flex-shrink: 0; }
+  .social-ig .social-icon { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+  .social-strava .social-icon { background: #FC4C02; }
+  .social-card-title { font-weight: 700; font-size: 14px; }
+  .social-card-sub { font-size: 12px; color: var(--gray-600); margin-top: 2px; }
+  .social-link { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--gray-900); text-decoration: none; white-space: nowrap; }
+  .social-link:hover { text-decoration: underline; }
+  .ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 14px; }
+  .ig-item { position: relative; aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; display: block; background: var(--gray-100); text-decoration: none; }
   .ig-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
   .ig-item:hover img { transform: scale(1.04); }
-  .ig-ph { width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 16px; color: #fff; font-size: 13px; font-weight: 600; line-height: 1.4; background: var(--gradient); }
-  .ig-item .ig-cap { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 14px; font-size: 12px; line-height: 1.4; color: #fff; background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 55%); opacity: 0; transition: opacity .2s; }
+  .ig-ph { width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 8px; color: #fff; font-size: 10px; font-weight: 600; line-height: 1.3; background: var(--gradient); }
+  .ig-item .ig-cap { position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 8px; font-size: 10px; line-height: 1.3; color: #fff; background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 55%); opacity: 0; transition: opacity .2s; }
   .ig-item:hover .ig-cap { opacity: 1; }
-  @media (max-width: 560px) { .ig-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .social-grid { grid-template-columns: 1fr; } }
   .section-label {
     font-size: 12px;
     font-weight: 700;
@@ -625,6 +638,11 @@
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-toggle { display: flex; }
+    .nav-right .grad-btn { display: none !important; }
+    .nav-book-mobile { display: block; }
+    .nav-upna { height: 22px; }
+    .nav-right { gap: 8px; }
+    .lang-toggle { font-size: 11px; padding: 3px 6px; }
     .nav-links {
       position: absolute;
       top: 68px; left: 0; right: 0;
@@ -683,6 +701,7 @@
     <li><a href="development.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">development</span></a></li>    <li><a href="#proyectos" data-i18n="nav.research">Investigación</a></li>
     <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
     <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+    <li class="nav-book-mobile"><a href="reservas.html" data-i18n="nav.book">Reservar</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-toggle" id="langToggle" title="Cambiar idioma / Switch language">
@@ -862,15 +881,31 @@
   </div>
 </section>
 
-<!-- INSTAGRAM FEED -->
-<section id="instagram" style="background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100);">
+<!-- SOCIAL: Instagram + Strava -->
+<section id="social" class="social-compact" style="background: var(--gray-50); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100);">
   <div class="section-inner">
-    <div class="section-label" data-i18n="ig.label">Instagram</div>
-    <div class="section-title" data-i18n="ig.title">El día a día del <span class="grad-text">laboratorio</span></div>
-    <div class="section-sub" data-i18n="ig.sub">Valoraciones, ciencia aplicada y novedades. Síguenos para no perderte nada.</div>
-    <div class="ig-grid" id="ig-grid"></div>
-    <div style="margin-top: 32px;">
-      <a class="grad-btn" id="ig-follow" href="https://instagram.com/live.lab" target="_blank" rel="noopener" style="display:inline-block; text-decoration:none;" data-i18n="ig.follow">Seguir en Instagram →</a>
+    <div class="social-grid">
+      <div class="social-card social-ig" id="ig-card">
+        <div class="social-card-head">
+          <span class="social-icon">IG</span>
+          <div>
+            <div class="social-card-title" data-i18n="ig.title2">Síguenos en Instagram</div>
+            <div class="social-card-sub" data-i18n="ig.sub2">El día a día del laboratorio</div>
+          </div>
+          <a class="social-link" id="ig-follow" href="https://instagram.com/live.lab" target="_blank" rel="noopener" data-i18n="ig.follow2">Seguir →</a>
+        </div>
+        <div class="ig-grid" id="ig-grid"></div>
+      </div>
+      <div class="social-card social-strava">
+        <div class="social-card-head">
+          <span class="social-icon">🏃</span>
+          <div>
+            <div class="social-card-title" data-i18n="strava.title">LIVE Strava Club</div>
+            <div class="social-card-sub" data-i18n="strava.sub">Entrena y comparte con la comunidad</div>
+          </div>
+          <a class="social-link" href="https://www.strava.com/clubs/liveunavarra" target="_blank" rel="noopener" data-i18n="strava.join">Unirme →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -905,7 +940,8 @@
         <h4 data-i18n="nav.contact">Contacto</h4>
         <ul>
           <li data-i18n="foot.book">Reservar cita</li>
-          <li>Instagram</li>
+          <li><a href="https://instagram.com/live.lab" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.strava.com/clubs/liveunavarra" target="_blank" rel="noopener">Strava</a></li>
           <li>Patreon</li>
           <li><a href="mailto:live.unavarra@gmail.com">live.unavarra@gmail.com</a></li>
         </ul>
@@ -940,7 +976,8 @@
       "serv.5.h":"Aholkularitza Zientifikoa", "serv.5.p":"Zure prozesu edo emaitza egungoa aztertzen dugu eta ebidentzian oinarritutako hobekuntzak proposatzen ditugu.", "serv.5.tag":"Neurrira",
       "serv.6.h":"Erreserbatu zure saioa", "serv.6.p":"Aukeratu zerbitzua, hautatu data eta ordua. Berrespen berehalakoa eta gogorarazpen automatikoa.", "serv.6.btn":"Eskuragarritasuna ikusi",
       "serv.cta1":"LIVEperformance ikusi →", "serv.cta2":"LIVEdevelopment ikusi →",
-      "ig.label":"Instagram", "ig.title":"Laborategiko <span class=\"grad-text\">eguneroko</span> bizitza", "ig.sub":"Balorazioak, zientzia aplikatua eta berriak. Jarraitu guri ezer galdu nahi ez baduzu.", "ig.follow":"Instagramen jarraitu →",
+      "ig.title2":"Jarraitu gu Instagramen", "ig.sub2":"Laborategiko eguneroko bizitza", "ig.follow2":"Jarraitu →",
+      "strava.title":"LIVE Strava Club", "strava.sub":"Entrenatu eta partekatu komunitatearekin", "strava.join":"Sartu →",
       "zero.h":"Ikerketa batean parte hartu.<br><span class=\"grad-text\">Kosturik gabe.</span>",
       "zero.p":"Gure proiektu batzuek balorazio osoak eskaintzen dituzte zure parte-hartzearen truke ikerketako subjektu gisa. Zuri ere onura ekartzen dizun benetako zientzia.",
       "zero.btn":"Eskuragarri dauden ikerketak ikusi", "zero.small":"Leku mugatuak · Konpromisorik gabe",
@@ -980,7 +1017,8 @@
       "serv.5.h":"Scientific Consulting", "serv.5.p":"We analyse your current process or results and propose evidence-based improvements.", "serv.5.tag":"Bespoke",
       "serv.6.h":"Book your session", "serv.6.p":"Choose the service, pick a date and time. Instant confirmation and an automatic reminder.", "serv.6.btn":"See availability",
       "serv.cta1":"See LIVEperformance →", "serv.cta2":"See LIVEdevelopment →",
-      "ig.label":"Instagram", "ig.title":"Inside the <span class=\"grad-text\">lab</span>", "ig.sub":"Assessments, applied science and updates. Follow us so you don't miss a thing.", "ig.follow":"Follow on Instagram →",
+      "ig.title2":"Follow us on Instagram", "ig.sub2":"Inside the lab", "ig.follow2":"Follow →",
+      "strava.title":"LIVE Strava Club", "strava.sub":"Train and share with the community", "strava.join":"Join →",
       "zero.h":"Join a study.<br><span class=\"grad-text\">At no cost.</span>",
       "zero.p":"Some of our projects offer complete assessments in exchange for your participation as a research subject. Real science that benefits you too.",
       "zero.btn":"See available studies", "zero.small":"Limited spots · No commitment",

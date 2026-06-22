@@ -68,7 +68,8 @@
   .nav-links a.nav-brand .sfx { color:#1A1A1A; }
   .nav-links a.nav-brand.current::after { content:""; position:absolute; left:0; right:0; bottom:-7px; height:2px; background:var(--gradient); border-radius:2px; }
   .nav-right { display:flex; align-items:center; gap:16px; }
-  .lang-toggle { font-size:13px; font-weight:600; color:var(--gray-400); cursor:pointer; padding:4px 10px; border:1px solid var(--gray-100); border-radius:6px; user-select:none; }
+  .nav-book-mobile { display: none; }
+  .lang-toggle { font-size:13px; font-weight:600; color:var(--gray-400); cursor:pointer; padding:4px 10px; border:1px solid var(--gray-100); border-radius:6px; user-select:none; white-space:nowrap; }
   .lang-toggle .active { color:var(--gray-900); }
   .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
   .nav-toggle span { width:22px; height:2px; background:var(--gray-900); border-radius:2px; transition:transform .25s,opacity .25s; }
@@ -151,6 +152,11 @@
   @media (max-width:900px){
     nav { padding:0 24px; }
     .nav-toggle { display:flex; }
+    .nav-right .grad-btn { display:none!important; }
+    .nav-book-mobile { display:block; }
+    .nav-upna { height:22px; }
+    .nav-right { gap:8px; }
+    .lang-toggle { font-size:11px; padding:3px 6px; }
     .nav-links { position:absolute; top:68px; left:0; right:0; flex-direction:column; gap:0; background:var(--white); border-bottom:1px solid var(--gray-100); padding:8px 0; display:none; align-items:stretch; }
     .nav-links.open { display:flex; }
     .nav-links a { display:block; padding:14px 24px; }
@@ -195,6 +201,7 @@
     <li><a href="development.html" class="nav-brand"><span class="grad-text">LIVE</span><span class="sfx">development</span></a></li>    <li><a href="index.html#proyectos" data-i18n="nav.research">Investigación</a></li>
     <li><a href="index.html#blog" data-i18n="nav.blog">Blog</a></li>
     <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+    <li class="nav-book-mobile"><a href="reservas.html" data-i18n="nav.book">Reservar</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-toggle" id="langToggle" title="Cambiar idioma / Switch language">
@@ -369,7 +376,8 @@
         <h4 data-i18n="nav.contact">Contacto</h4>
         <ul>
           <li data-i18n="foot.book">Reservar cita</li>
-          <li>Instagram</li>
+          <li><a href="https://instagram.com/live.lab" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.strava.com/clubs/liveunavarra" target="_blank" rel="noopener">Strava</a></li>
           <li><a href="mailto:live.unavarra@gmail.com">live.unavarra@gmail.com</a></li>
         </ul>
       </div>

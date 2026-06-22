@@ -6,7 +6,7 @@
   "use strict";
   var grid = document.getElementById("ig-grid");
   if (!grid) return;
-  var MAX = 6;
+  var MAX = 4;
 
   function esc(s) {
     return (s || "").replace(/[&<>"]/g, function (c) {
@@ -14,7 +14,7 @@
     });
   }
   function hideSection() {
-    var s = document.getElementById("instagram");
+    var s = document.getElementById("ig-card");
     if (s) s.style.display = "none";
   }
 
